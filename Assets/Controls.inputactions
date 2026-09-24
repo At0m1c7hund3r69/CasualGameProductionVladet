@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Game",
+            "id": "404b499d-90f3-4692-962a-c4dd46581624",
+            "actions": [
+                {
+                    "name": "Primary",
+                    "type": "Button",
+                    "id": "a8516b66-0dae-47c3-96d0-d269399fdda2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Camera",
+                    "type": "Value",
+                    "id": "c67e39a0-8f81-403d-93b7-c95aedc14bec",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d48c0f3e-c7b5-4ac2-a0cc-d287bf8e3620",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a2a451e5-851b-4ccc-809b-487f8d0e1c98",
+                    "path": "<Touchscreen>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
