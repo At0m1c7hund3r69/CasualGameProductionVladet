@@ -14,7 +14,6 @@ public class PlayerGridMovement : MonoBehaviour
     public Vector2Int CurrentCoordinate { get; private set;  }
     private bool isMoving = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         CurrentCoordinate = startingCoordinate;
@@ -30,6 +29,8 @@ public class PlayerGridMovement : MonoBehaviour
 
     public void AttemptMove(Vector3 direction)
     {
+        if (TurnManager.instance.currentState != TurnState.PlayerTurn) return;
+
         if (isMoving) return;
 
         Vector2Int gridDirection = new Vector2Int(Mathf.RoundToInt(direction.x), Mathf.RoundToInt(direction.z));
@@ -42,6 +43,7 @@ public class PlayerGridMovement : MonoBehaviour
             if (!targetNode.IsOccupied)
             {
                 StartCoroutine(SlideToTile(targetNode));
+                TurnManager.instance.EndPlayerTurn();
             }
             else
             {

@@ -10,7 +10,6 @@ public class EnemyPawn : MonoBehaviour
     [Header("Settings")]
     public Vector2Int coordinate;
     public bool isPossessed = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -22,14 +21,14 @@ public class EnemyPawn : MonoBehaviour
             gridManager.Grid[coordinate].IsOccupied = true;
             gridManager.Grid[coordinate].Occupant = this.gameObject;
         }
-        
+
+        if (TurnManager.instance != null) TurnManager.instance.RegisterEnemy(this);
     }
 
     public void Possess()
     {
         if (isPossessed) return;
         isPossessed = true;
-        Debug.Log(name + "has been possessed!");
 
         if (meshRenderer  != null && possessedMaterial != null)
         {
