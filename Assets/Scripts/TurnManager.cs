@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 
 public enum TurnState
 {
+    FirstBlood,
     PlayerTurn,
     EnemyTurn,
     GameOver
@@ -16,7 +17,7 @@ public class TurnManager : MonoBehaviour
     public static TurnManager instance {  get; private set; }
 
     [Header("Turn")]
-    public TurnState currentState = TurnState.PlayerTurn;
+    public TurnState currentState = TurnState.FirstBlood;
 
     [Header("Board Entities")]
     public List<EnemyPawn> activeEnemies = new List<EnemyPawn>();
