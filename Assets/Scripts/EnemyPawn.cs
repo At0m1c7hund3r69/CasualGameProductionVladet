@@ -64,6 +64,43 @@ public class EnemyPawn : MonoBehaviour
         return true;
     }
 
+    public void ExecuteKillMove(EnemyPawn targetEnemy, Vector2Int targetCoord)
+    {
+        GridNode targetNode = gridManager.Grid[targetCoord];
+        StartCoroutine(KillAndMoveCoroutine(targetEnemy, targetNode, targetCoord));
+    }
+
+    private System.Collections.IEnumerator KillAndMoveCoroutine(EnemyPawn targetEnemy, GridNode targetNode, Vector2Int targetCoord)
+    {
+        Destroy(targetEnemy.gameObject);
+
+        gridManager.Grid[coordinate].IsOccupied = false;
+        gridManager.Grid[coordinate].Occupant = null;
+
+        coordinate = targetCoord;
+        targetNode.IsOccupied = true;
+        targetNode.Occupant = this.gameObject;
+
+        Vector3 startPos = transform.position;
+        Vector3 endPos = targetNode.WorldPosition;
+        float elapsedTime = 0f;
+        float moveDuration = 0.2f;
+
+        while (elapsedTime < moveDuration)
+        {
+            transform.position = Vector3.Lerp(startPos, endPos, (elapsedTime / moveDuration));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = endPos;
+
+        if (TurnManager.instance)
+        {
+            TurnManager.instance.TriggerGameOver();
+        }
+    }
+
     private System.Collections.IEnumerator SlideCoroutine(GridNode targetNode, Vector2Int targetCoord)
     {
         gridManager.Grid[coordinate].IsOccupied = false;
