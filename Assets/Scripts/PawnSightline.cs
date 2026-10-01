@@ -16,6 +16,8 @@ public class PawnSightline : MonoBehaviour
     {
         if (gridManager == null || baseUnit == null) return;
 
+        if (baseUnit.isPossessed) return;
+
         Vector2Int currentCheckCoord = baseUnit.coordinate;
         
         for (int i = 1;  i <= sightRange; i++)
@@ -35,18 +37,15 @@ public class PawnSightline : MonoBehaviour
 
                 if(targetEnemy != null && targetEnemy.isPossessed)
                 {
-                    TurnManager.instance.TriggerGameOver();
+                    baseUnit.ExecuteKillMove(targetEnemy, currentCheckCoord);
                     return;
                 }
                 else
                 {
-                    Debug.Log($"{gameObject.name}'s vision blocked by {node.Occupant.name} at {currentCheckCoord}.");
                     break;
                 }
             }
         }
-
-        Debug.Log("Scan finished. Found nothing but empty space.");
     }
 
     void Update()
