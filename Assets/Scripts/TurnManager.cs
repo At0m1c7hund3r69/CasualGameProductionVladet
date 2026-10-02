@@ -8,7 +8,8 @@ public enum TurnState
     FirstBlood,
     PlayerTurn,
     EnemyTurn,
-    GameOver
+    GameOver,
+    LevelComplete
 }
 
 
@@ -42,12 +43,41 @@ public class TurnManager : MonoBehaviour
         }
     }
 
+    public void UnRegisterEnemy(EnemyPawn enemy)
+    {
+        if (activeEnemies.Contains(enemy))
+        {
+            activeEnemies.Remove(enemy);
+        }
+    }
+
     public void EndPlayerTurn()
     {
         if (currentState != TurnState.PlayerTurn) return;
 
         currentState = TurnState.EnemyTurn;
         StartCoroutine(EnemyPhaseRoutine());
+    }
+
+    public void CheckWinLoseState()
+    {
+        activeEnemies.RemoveAll(item => item == null);
+
+        int possessedCount = 0;
+        foreach (EnemyPawn pawn in activeEnemies)
+        {
+            if (pawn.isPossessed) possessedCount++;
+        }
+
+        if (possessedCount == 0)
+        {
+            currentState = TurnState.GameOver;
+        }
+        else if (possessedCount == activeEnemies.Count && activeEnemies.Count > 0)
+        {
+            currentState = TurnState.LevelComplete;
+        }
+
     }
 
     private IEnumerator EnemyPhaseRoutine()

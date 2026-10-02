@@ -33,7 +33,12 @@ public class EnemyPawn : MonoBehaviour
         if (meshRenderer  != null && possessedMaterial != null)
         {
             meshRenderer.material = possessedMaterial;
-        } 
+        }
+        
+        if (TurnManager.instance == null)
+        {
+            TurnManager.instance.CheckWinLoseState();
+        }
     }
 
     public bool AttemptAction(Vector2Int direction)
@@ -72,6 +77,7 @@ public class EnemyPawn : MonoBehaviour
 
     private System.Collections.IEnumerator KillAndMoveCoroutine(EnemyPawn targetEnemy, GridNode targetNode, Vector2Int targetCoord)
     {
+        if (TurnManager.instance) TurnManager.instance.UnRegisterEnemy(targetEnemy);
         Destroy(targetEnemy.gameObject);
 
         gridManager.Grid[coordinate].IsOccupied = false;
@@ -97,7 +103,7 @@ public class EnemyPawn : MonoBehaviour
 
         if (TurnManager.instance)
         {
-            TurnManager.instance.TriggerGameOver();
+            TurnManager.instance.CheckWinLoseState();
         }
     }
 
