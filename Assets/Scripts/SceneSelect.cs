@@ -23,6 +23,11 @@ public class SceneSelect : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("LoseScreen"); //Changes scene to the Lose Screen
     }
 
+    public void Puzzle_Level1()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Puzzle_LevelOne"); //Changes scene to the Lose Screen
+    }
+
     public void Endgame()
     {
         Application.Quit(); //used to quit game with a button press
