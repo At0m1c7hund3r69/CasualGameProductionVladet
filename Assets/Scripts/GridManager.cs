@@ -31,7 +31,7 @@ public class GridManager : MonoBehaviour
             for (int y = 0; y < height; y++)
             {
                 Vector2Int coord = new Vector2Int(x, y);
-                Vector3 worldPos = new Vector3(x * cellSize, 0, y * cellSize);
+                Vector3 worldPos = transform.position + new Vector3(x * cellSize, 0, y * cellSize);
                 Grid.Add(coord, new GridNode(coord, worldPos));
             }
         }
