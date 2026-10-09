@@ -101,6 +101,15 @@ public class TurnManager : MonoBehaviour
                 sightline.CheckLineOfSight();
             }
 
+            if (currentState != TurnState.GameOver)
+            {
+                EnemyPatrol patrol = pawn.GetComponent<EnemyPatrol>();
+                if (patrol != null)
+                {
+                    patrol.TakePatrolStep();
+                }
+            }
+
             yield return new WaitForSeconds(0.1f);
         }
 

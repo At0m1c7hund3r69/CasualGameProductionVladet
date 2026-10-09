@@ -73,7 +73,6 @@ public class PawnSightline : MonoBehaviour
 
         Gizmos.color = Color.red;
         Vector3 startPos = transform.position + Vector3.up * 0.5f;
-        Vector3 direction3D = new Vector3(lookDirection.x, 0, lookDirection.y);
-        Gizmos.DrawRay(startPos, direction3D * sightRange);
+        Gizmos.DrawRay(startPos, transform.forward * sightRange);
     }
 }
