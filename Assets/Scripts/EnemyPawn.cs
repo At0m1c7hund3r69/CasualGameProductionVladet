@@ -69,6 +69,26 @@ public class EnemyPawn : MonoBehaviour
         return true;
     }
 
+    public bool ExecuteAIMove(Vector2Int direction)
+    {
+        if (gridManager == null) return false;
+
+        Vector2Int targetCoord = coordinate + direction;
+
+        if (!gridManager.Grid.ContainsKey (targetCoord)) return false;
+
+        GridNode targetNode = gridManager.Grid[targetCoord];
+
+        if (targetNode.IsOccupied)
+        {
+            return false;
+        }
+
+        GetComponent<PawnSightline>().Rotate(direction);
+        StartCoroutine(SlideCoroutine(targetNode, targetCoord));
+        return true;
+    }
+
     public void ExecuteKillMove(EnemyPawn targetEnemy, Vector2Int targetCoord)
     {
         GridNode targetNode = gridManager.Grid[targetCoord];
