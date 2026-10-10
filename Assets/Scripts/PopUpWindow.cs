@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PopupWindow : MonoBehaviour
 {
+    //Progress - Testing
+
     public CanvasGroup canvasGroup;
     public float showTime = 3f;
     public float fadeDuration = 1.5f;
