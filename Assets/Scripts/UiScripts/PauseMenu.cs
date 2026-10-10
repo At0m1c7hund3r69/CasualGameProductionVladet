@@ -3,9 +3,10 @@ using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
-    //Progress - Devolopment
-    
+    //Progress - Development
     public GameObject pauseMenu;
+    public GameObject gameplayUI;
+
     public MonoBehaviour cameraLookScript;
     public GameObject firstSelectedButton;
 
@@ -13,14 +14,18 @@ public class PauseMenu : MonoBehaviour
 
     private EventSystem eventSystem;
 
-    void Start()
+    void Start() //Sets the Pause Panel to inactive on start
     {
         pauseMenu.SetActive(false);
+
+        if (gameplayUI != null)
+        {
+            gameplayUI.SetActive(true);
+        }
 
         Time.timeScale = 1f;
         isPaused = false;
 
-        // Initialize the EventSystem
         eventSystem = EventSystem.current;
 
         if (eventSystem == null)
@@ -29,12 +34,17 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    // Called by the mobile UI Pause button
-    public void PauseGame()
+    public void PauseGame() //Sets game time to zero, close gameplay UI, opens up pause panel
     {
         if (isPaused) return;
 
         pauseMenu.SetActive(true);
+
+        if (gameplayUI != null)
+        {
+            gameplayUI.SetActive(false);
+        }
+
         Time.timeScale = 0f;
         isPaused = true;
 
@@ -49,11 +59,16 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    // Called by the Resume button
-    public void ResumeGame()
+    public void ResumeGame() //Sets gametime back to normal, closes pause panel, reopens gameplayUI
     {
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
+
+        if (gameplayUI != null)
+        {
+            gameplayUI.SetActive(true);
+        }
+
         isPaused = false;
 
         if (cameraLookScript != null)
@@ -61,7 +76,6 @@ public class PauseMenu : MonoBehaviour
             cameraLookScript.enabled = true;
         }
 
-        // Clear any selected UI object
         if (eventSystem != null)
         {
             eventSystem.SetSelectedGameObject(null);
