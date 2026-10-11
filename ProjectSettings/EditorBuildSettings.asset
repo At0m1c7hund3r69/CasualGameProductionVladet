@@ -6,19 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Puzzle_LevelOne.unity
+    path: Assets/Scenes/LevelSelect.unity
+    guid: c19e411679a3e2649b29d0bb664851c9
+  - enabled: 1
+    path: Assets/Scenes/Puzzle_LV1/Puzzle_LevelOne.unity
     guid: 7028e0bae9cd0b94e8c27f83012bf333
   - enabled: 0
-    path: Assets/Scenes/LevelOne.unity
+    path: Assets/Scenes/Testing/LevelOne.unity
     guid: ed698b9ae03fe614ba7b587ddb5dd0e5
   - enabled: 1
-    path: Assets/Scenes/WinScreen.unity
+    path: Assets/Scenes/Puzzle_LV1/WinScreen.unity
     guid: 9c0d1bcbfaefd2f41bdcab6d77dfdb30
   - enabled: 1
-    path: Assets/Scenes/LoseScreen.unity
+    path: Assets/Scenes/Puzzle_LV1/LoseScreen.unity
     guid: 8cdcf6a71c4db664ebd8df470ea5bd39
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Testing/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
