@@ -14,63 +14,67 @@ public class PivotCamera : MonoBehaviour
     public float minZoom = 2f;
     public float maxZoom = 10f;
 
-    private InputAction deltaAction;
-    private InputAction zoomAction;
-    private InputAction pressAction;
+    private bool isInteractingWithBoard = false;
 
-    private void OnEnable()
+    private void Update()
     {
-        deltaAction = inputAsset.FindAction("Game/Camera");
-        zoomAction = inputAsset.FindAction("Game/Zoom");
-        pressAction = inputAsset.FindAction("Game/Primary");
+        var touch = Touchscreen.current;
+        if (touch == null) return;
 
-        deltaAction.Enable();
-        zoomAction.Enable();
-        pressAction.Enable();
-    }
+        bool touch0Active = touch.touches[0].press.isPressed;
+        bool touch1Active = touch.touches[1].press.isPressed;
 
-    private void OnDisable()
-    {
-        deltaAction.Disable();
-        zoomAction.Disable();
-        pressAction.Disable();
-    }
-
-    private void HandleRotation()
-    {
-        if (pressAction.ReadValue<float>() > 0)
+        if (touch0Active && !touch1Active)
         {
-            Vector2 delta = deltaAction.ReadValue<Vector2>();
+            HandleRotation(touch);
+        }
+        else if (touch0Active && touch1Active)
+        {
+            HandleZoom(touch);
+            isInteractingWithBoard = false;
+        }
+        else
+        {
+            isInteractingWithBoard = false;
+        }
+    }
+    private void HandleRotation(Touchscreen touch)
+    {
+        var primaryTouch = touch.touches[0];
+
+        if (primaryTouch.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Began)
+        {
+            Ray ray = mainCamera.ScreenPointToRay(primaryTouch.position.ReadValue());
+
+            if (Physics.Raycast(ray))
+            {
+                isInteractingWithBoard = true;
+            }
+        }
+
+        if (!isInteractingWithBoard)
+        {
+            Vector2 delta = primaryTouch.delta.ReadValue();
             transform.Rotate(Vector3.up, delta.x * rotationSpeed, Space.World);
         }
     }
 
-    private void Update()
+    private void HandleZoom(Touchscreen touch)
     {
-        HandleRotation();
-        HandleZoom();
-    }
+        Vector2 touch0Pos = touch.touches[0].position.ReadValue();
+        Vector2 touch1Pos = touch.touches[1].position.ReadValue();
 
-    private void HandleZoom()
-    {
-        var touch = UnityEngine.InputSystem.Touchscreen.current;
-        if (touch != null && touch.touches[0].press.isPressed && touch.touches[1].press.isPressed)
-        {
-            Vector2 touch0Pos = touch.touches[0].position.ReadValue();
-            Vector2 touch1Pos = touch.touches[1].position.ReadValue();
+        Vector2 touch0PrevPos = touch0Pos - touch.touches[0].delta.ReadValue();
+        Vector2 touch1PrevPos = touch1Pos - touch.touches[1].delta.ReadValue();
 
-            Vector2 touch0PrevPos = touch0Pos - touch.touches[0].delta.ReadValue();
-            Vector2 touch1PrevPos = touch1Pos - touch.touches[1].delta.ReadValue();
+        float prevDistance = Vector2.Distance(touch0PrevPos, touch1PrevPos);
+        float currentDistance = Vector2.Distance(touch0Pos, touch1Pos);
+        float zoomDelta = currentDistance - prevDistance;
 
-            float prevDistance = Vector2.Distance(touch0PrevPos, touch1PrevPos);
-            float currentDistance = Vector2.Distance(touch0Pos, touch1Pos);
-            float zoomDelta = currentDistance - prevDistance;
+        Vector3 localPos = mainCamera.transform.localPosition;
+        localPos.z += zoomDelta * zoomSpeed;
 
-            Vector3 localPos = mainCamera.transform.localPosition;
-            localPos.z += zoomDelta * zoomSpeed;
-
-            localPos.z = Mathf.Clamp(localPos.z, -maxZoom, -minZoom);
-            mainCamera.transform.localPosition = localPos;
-        }
+        localPos.z = Mathf.Clamp(localPos.z, -maxZoom, -minZoom);
+        mainCamera.transform.localPosition = localPos;
     }
 }
