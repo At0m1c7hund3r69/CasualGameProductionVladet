@@ -25,7 +25,12 @@ public class SceneSelect : MonoBehaviour
 
     public void Puzzle_Level1()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Puzzle_LevelOne"); //Changes scene to the Lose Screen
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Puzzle_LevelOne"); //Changes scene to the lv1
+    }
+
+    public void Puzzle_Level2()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Puzzle_LevelTwo"); //Changes scene to the lv2
     }
 
     public void Endgame()
