@@ -897,7 +897,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 1170, y: 0}
+  m_AnchoredPosition: {x: 1170, y: 9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &195063708
@@ -6055,7 +6055,7 @@ RectTransform:
   m_GameObject: {fileID: 1153751270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.291032, y: 10.223201, z: 4.0514503}
+  m_LocalScale: {x: 4.291032, y: 10.346474, z: 4.0514503}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 53844250}
@@ -6063,7 +6063,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -715, y: 16}
+  m_AnchoredPosition: {x: -715, y: -13}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1153751272
@@ -10961,7 +10961,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -798, y: 436}
+  m_AnchoredPosition: {x: -798, y: 445}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1856314817
@@ -10991,15 +10991,15 @@ MonoBehaviour:
 
     Buttons - Tap the icons to open up menus and options to restart the level.
 
-    
+
 
     Starting the level - First select your starting possessed by tapping a villager.
 
-    
+
 
     Movement - Slide your possessed Villgers to an adjacent space to move them there.
 
-    
+
 
     Possessing - When Adjacent to a enemy (Unpossessed Villager) with one of your possessed, slide the space the enemy is on.
 
