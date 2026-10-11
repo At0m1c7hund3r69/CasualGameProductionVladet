@@ -11,33 +11,27 @@ public class PawnSightline : MonoBehaviour
     public Vector2Int lookDirection = new Vector2Int(0, 1);
     public int sightRange = 3;
 
-    public void CheckLineOfSight()
+    public bool CheckLineOfSight()
     {
-        if (gridManager == null || baseUnit == null) return;
-
-        if (baseUnit.isPossessed) return;
+       if (gridManager == null || baseUnit == null) return false;
+       if (baseUnit.isPossessed) return false;
 
         Vector2Int currentCheckCoord = baseUnit.coordinate;
-        
-        for (int i = 1;  i <= sightRange; i++)
+
+       for (int i = 1; i <= sightRange; i++)
         {
             currentCheckCoord += lookDirection;
-
-            if (!gridManager.Grid.ContainsKey(currentCheckCoord))
-            {
-                break;
-            }
+            if (!gridManager.Grid.ContainsKey(currentCheckCoord)) break;
 
             GridNode node = gridManager.Grid[currentCheckCoord];
 
             if (node.IsOccupied && node.Occupant != null)
             {
                 EnemyPawn targetEnemy = node.Occupant.GetComponent<EnemyPawn>();
-
-                if(targetEnemy != null && targetEnemy.isPossessed)
+                if (targetEnemy != null && targetEnemy.isPossessed)
                 {
                     baseUnit.ExecuteKillMove(targetEnemy, currentCheckCoord);
-                    return;
+                    return true;
                 }
                 else
                 {
@@ -45,6 +39,7 @@ public class PawnSightline : MonoBehaviour
                 }
             }
         }
+        return false;
     }
 
     void Update()

@@ -65,6 +65,18 @@ public class EnemyPawn : MonoBehaviour
             }
             return false;
         }
+
+        PawnSightline sightline = GetComponent<PawnSightline>();
+        if (sightline != null)
+        {
+            sightline.Rotate(direction);
+
+            if (sightline.CheckLineOfSight())
+            {
+                return true;
+            }
+        }
+
         StartCoroutine(SlideCoroutine(targetNode, targetCoord));
         return true;
     }

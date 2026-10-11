@@ -95,13 +95,14 @@ public class TurnManager : MonoBehaviour
         {
             if (pawn == null) continue;
 
+            bool caughtPlayer = false;
+
             PawnSightline sightline = pawn.GetComponent<PawnSightline>();
             if (sightline != null)
             {
-                sightline.CheckLineOfSight();
+                caughtPlayer = sightline.CheckLineOfSight();
             }
-
-            if (currentState != TurnState.GameOver)
+            if (currentState != TurnState.GameOver && !caughtPlayer)
             {
                 EnemyPatrol patrol = pawn.GetComponent<EnemyPatrol>();
                 if (patrol != null)
