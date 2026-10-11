@@ -90,15 +90,35 @@ public class PlayerGameController : MonoBehaviour
 
     void ExecuteSwipeCommand(Vector2 rawSwipe)
     {
-        Vector2Int moveDirection = Vector2Int.zero;
+        Vector2 screenDirection = Vector2Int.zero;
 
         if (Mathf.Abs(rawSwipe.x) > Mathf.Abs(rawSwipe.y))
         {
-            moveDirection = rawSwipe.x > 0 ? new Vector2Int(1, 0) : new Vector2Int(-1, 0);
+            screenDirection = rawSwipe.x > 0 ? new Vector2Int(1, 0) : new Vector2Int(-1, 0);
         }
         else
         {
-            moveDirection = rawSwipe.y > 0 ? new Vector2Int(0, 1) : new Vector2Int(0, -1);
+            screenDirection = rawSwipe.y > 0 ? new Vector2Int(0, 1) : new Vector2Int(0, -1);
+        }
+
+        Vector3 camForward = Camera.main.transform.forward;
+        Vector3 camRight = Camera.main.transform.right;
+
+        camForward.y = 0;
+        camRight.y = 0;
+        camForward.Normalize();
+        camRight.Normalize();
+
+        Vector3 relative3D = (camRight * screenDirection.x) + (camForward * screenDirection.y);
+
+        Vector2Int moveDirection = Vector2Int.zero;
+        if (Mathf.Abs(relative3D.x) > Mathf.Abs(relative3D.z))
+        {
+            moveDirection = new Vector2Int((int)Mathf.Sign(relative3D.x), 0);
+        }
+        else
+        {
+            moveDirection = new Vector2Int(0, (int)Mathf.Sign(relative3D.z));
         }
 
         bool actionSuccessful = activeSwipePawn.AttemptAction(moveDirection);
