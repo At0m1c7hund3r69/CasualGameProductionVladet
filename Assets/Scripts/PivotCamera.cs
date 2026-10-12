@@ -15,6 +15,15 @@ public class PivotCamera : MonoBehaviour
     public float maxZoom = 10f;
 
     private bool isInteractingWithBoard = false;
+    private float currentCamDistance;
+
+    private void Start()
+    {
+        if(mainCamera != null)
+        {
+            currentCamDistance = Vector3.Distance(transform.position, mainCamera.transform.position);
+        }
+    }
 
     private void Update()
     {
@@ -28,11 +37,11 @@ public class PivotCamera : MonoBehaviour
         {
             HandleRotation(touch);
         }
-        else if (touch0Active && touch1Active)
-        {
-            HandleZoom(touch);
-            isInteractingWithBoard = false;
-        }
+        //else if (touch0Active && touch1Active)
+        //{
+        //    HandleZoom(touch);
+        //    isInteractingWithBoard = false;
+        //}
         else
         {
             isInteractingWithBoard = false;
@@ -61,20 +70,34 @@ public class PivotCamera : MonoBehaviour
 
     private void HandleZoom(Touchscreen touch)
     {
-        Vector2 touch0Pos = touch.touches[0].position.ReadValue();
-        Vector2 touch1Pos = touch.touches[1].position.ReadValue();
+        var touch0 = touch.touches[0];
+        var touch1 = touch.touches[1];
 
-        Vector2 touch0PrevPos = touch0Pos - touch.touches[0].delta.ReadValue();
-        Vector2 touch1PrevPos = touch1Pos - touch.touches[1].delta.ReadValue();
+        if (touch0.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Began ||
+            touch1.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Began ||
+            touch0.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Ended ||
+            touch1.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Ended)
+        {
+            return;
+        }
+
+        Vector2 touch0Pos = touch0.position.ReadValue();
+        Vector2 touch1Pos = touch1.position.ReadValue();
+
+        Vector2 touch0PrevPos = touch0Pos - touch0.delta.ReadValue();
+        Vector2 touch1PrevPos = touch1Pos - touch1.delta.ReadValue();
 
         float prevDistance = Vector2.Distance(touch0PrevPos, touch1PrevPos);
         float currentDistance = Vector2.Distance(touch0Pos, touch1Pos);
+
         float zoomDelta = currentDistance - prevDistance;
 
         Vector3 localPos = mainCamera.transform.localPosition;
+
         localPos.z += zoomDelta * zoomSpeed;
 
         localPos.z = Mathf.Clamp(localPos.z, -maxZoom, -minZoom);
+
         mainCamera.transform.localPosition = localPos;
     }
 }

@@ -2513,7 +2513,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 25
   m_Depth: 0
   m_CullingMask:
@@ -2538,13 +2538,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739106574}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 17.43, y: 31.46, z: 17.24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.3066756, y: -0, z: -0, w: 0.9518141}
+  m_LocalPosition: {x: 0.7200012, y: 15.06, z: -47.99}
+  m_LocalScale: {x: 1, y: 11.99885, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_Father: {fileID: 1736516214}
+  m_LocalEulerAnglesHint: {x: 35.718, y: 0, z: 0}
 --- !u!114 &739106580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6320,6 +6320,57 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1535314746}
   m_SourcePrefab: {fileID: 100100000, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
+--- !u!1 &1736516213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1736516214}
+  - component: {fileID: 1736516215}
+  m_Layer: 0
+  m_Name: CameraPivotPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1736516214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736516213}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.13, y: 20, z: 19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 739106579}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1736516215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736516213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38766c4f19509f94d8056a5bef60a72e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PivotCamera
+  mainCamera: {fileID: 739106578}
+  inputAsset: {fileID: -944628639613478452, guid: 049399619dcc6584599217e6839ea81e, type: 3}
+  rotationSpeed: 0.2
+  zoomSpeed: 0.01
+  minZoom: 2
+  maxZoom: 10
 --- !u!1 &1766179231
 GameObject:
   m_ObjectHideFlags: 0
@@ -7965,7 +8016,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 144838793}
   - {fileID: 346883000}
-  - {fileID: 739106579}
   - {fileID: 1562044122}
   - {fileID: 1896594051}
   - {fileID: 1623344501}
@@ -7979,3 +8029,4 @@ SceneRoots:
   - {fileID: 419819383}
   - {fileID: 797908716}
   - {fileID: 1283441080}
+  - {fileID: 1736516214}
