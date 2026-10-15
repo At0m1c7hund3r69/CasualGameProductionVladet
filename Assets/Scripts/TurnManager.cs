@@ -111,6 +111,12 @@ public class TurnManager : MonoBehaviour
                 }
             }
 
+            PriestBehavior priest = pawn.GetComponent<PriestBehavior>();
+            if (priest != null)
+            {
+                priest.ProcessPriestTurn();
+            }
+
             yield return new WaitForSeconds(0.1f);
         }
 

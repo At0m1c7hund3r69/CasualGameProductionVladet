@@ -10,6 +10,18 @@ public class EnemyPawn : MonoBehaviour
     [Header("Settings")]
     public Vector2Int coordinate;
     public bool isPossessed = false;
+
+    private Material originalMaterial;
+    private Renderer pawnRenderer;
+
+    private void Awake()
+    {
+        pawnRenderer = GetComponentInChildren<Renderer>();
+        if (pawnRenderer != null )
+        {
+            originalMaterial = pawnRenderer.material;
+        }
+    }
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -38,6 +50,16 @@ public class EnemyPawn : MonoBehaviour
         if (TurnManager.instance == null)
         {
             TurnManager.instance.CheckWinLoseState();
+        }
+    }
+
+    public void Unpossess()
+    {
+        isPossessed = false;
+
+        if (pawnRenderer !=null && originalMaterial != null)
+        {
+            pawnRenderer.material = originalMaterial;
         }
     }
 
