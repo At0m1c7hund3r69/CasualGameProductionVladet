@@ -33,10 +33,15 @@ public class SceneSelect : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Puzzle_LevelTwo"); //Changes scene to the lv2
     }
 
+    public void Puzzle_Level3()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Puzzle_LevelThree"); //Changes scene to the lv3
+    }
+
 
     public void LevelSelect()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelect"); //Changes scene to the lv2
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelect"); //Changes scene to the sceneSelect
     }
 
 
