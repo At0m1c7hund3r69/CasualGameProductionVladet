@@ -33,6 +33,13 @@ public class SceneSelect : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Puzzle_LevelTwo"); //Changes scene to the lv2
     }
 
+
+    public void LevelSelect()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelect"); //Changes scene to the lv2
+    }
+
+
     public void Endgame()
     {
         Application.Quit(); //used to quit game with a button press
