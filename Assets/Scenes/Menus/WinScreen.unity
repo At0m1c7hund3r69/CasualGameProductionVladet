@@ -2313,7 +2313,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1792165094}
         m_TargetAssemblyTypeName: SceneSelect, Assembly-CSharp
-        m_MethodName: Puzzle_Level2
+        m_MethodName: LevelSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
