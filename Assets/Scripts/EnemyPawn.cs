@@ -131,6 +131,11 @@ public class EnemyPawn : MonoBehaviour
 
     private System.Collections.IEnumerator KillAndMoveCoroutine(EnemyPawn targetEnemy, GridNode targetNode, Vector2Int targetCoord)
     {
+        if (TurnManager.instance != null)
+        {
+            TurnManager.instance.CheckPawnDeathCondition(this);
+        }
+
         if (TurnManager.instance) TurnManager.instance.UnRegisterEnemy(targetEnemy);
         Destroy(targetEnemy.gameObject);
 

@@ -24,6 +24,9 @@ public class TurnManager : MonoBehaviour
     [Header("Board Entities")]
     public List<EnemyPawn> activeEnemies = new List<EnemyPawn>();
 
+    [Header("Level Specifc Rules")]
+    public bool loseOnPossessedDeath = false;
+
     void Awake()
     {
         if (instance == null)
@@ -61,6 +64,15 @@ public class TurnManager : MonoBehaviour
 
         currentState = TurnState.EnemyTurn;
         StartCoroutine(EnemyPhaseRoutine());
+    }
+
+    public void CheckPawnDeathCondition(EnemyPawn deadPawn)
+    {
+        if (loseOnPossessedDeath && deadPawn.isPossessed)
+        {
+            currentState = TurnState.GameOver;
+            SceneManager.LoadScene("LoseScreen");
+        }
     }
 
     public void CheckWinLoseState()

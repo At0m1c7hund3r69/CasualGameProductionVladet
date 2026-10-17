@@ -41,6 +41,11 @@ public class PriestBehavior : MonoBehaviour
             {
                 if (target.isPossessed)
                 {
+                    if (TurnManager.instance != null)
+                    {
+                        TurnManager.instance.CheckPawnDeathCondition(target);
+                    }
+
                     target.Unpossess();
                 }
             }

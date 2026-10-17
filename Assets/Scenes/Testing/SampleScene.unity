@@ -165,7 +165,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PivotCamera
   mainCamera: {fileID: 330585545}
-  inputAsset: {fileID: -944628639613478452, guid: 049399619dcc6584599217e6839ea81e, type: 3}
   rotationSpeed: 0.2
   zoomSpeed: 0.05
   minZoom: 2
@@ -201,6 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TurnManager
   currentState: 0
   activeEnemies: []
+  loseOnPossessedDeath: 0
 --- !u!4 &147059184
 Transform:
   m_ObjectHideFlags: 0
