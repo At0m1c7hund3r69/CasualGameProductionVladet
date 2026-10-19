@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+using NUnit.Framework;
 
 public enum TurnState
 {
@@ -26,6 +27,10 @@ public class TurnManager : MonoBehaviour
 
     [Header("Level Specifc Rules")]
     public bool loseOnPossessedDeath = false;
+
+    [Header("SFX")]
+    public AudioClip PlayersTurnSfx;
+    [UnityEngine.Range(0f, 1f)] public float sfxVolume = 1f;
 
     void Awake()
     {
@@ -134,6 +139,11 @@ public class TurnManager : MonoBehaviour
 
         if (currentState != TurnState.GameOver)
         {
+            if (PlayersTurnSfx != null && Camera.main != null)
+            {
+                AudioSource.PlayClipAtPoint(PlayersTurnSfx, Camera.main.transform.position, sfxVolume);
+            }
+
             currentState = TurnState.PlayerTurn;
             Debug.Log("Player Turn");
         }

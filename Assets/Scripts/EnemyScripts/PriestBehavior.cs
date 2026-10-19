@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 
 public class PriestBehavior : MonoBehaviour
 {
@@ -12,6 +11,14 @@ public class PriestBehavior : MonoBehaviour
     [Header("Settings")]
     public int radius = 2;
     public int turnsToActivate = 3;
+
+    [Header("VFX")]
+    public GameObject priestWaveVfx;
+    public Vector3 waveOffset = new Vector3(0, 0.2f, 0);
+
+    [Header("SFX")]
+    public AudioClip priestWaveSfx;
+    [Range(0f, 1f)] public float waveVolume = 1f;
 
     private int currentTurnCount = 0;
 
@@ -33,6 +40,17 @@ public class PriestBehavior : MonoBehaviour
 
     private void ActivateAbility()
     {
+        if (priestWaveVfx != null)
+        {
+            GameObject vfx = Instantiate(priestWaveVfx, transform.position + waveOffset, Quaternion.identity);
+            Destroy(vfx, 1.5f);
+        }
+
+        if (priestWaveSfx != null)
+        {
+            AudioSource.PlayClipAtPoint(priestWaveSfx, Camera.main.transform.position, waveVolume);
+        }
+
         List<EnemyPawn> pawnsInRadius = GetPawnsInRadius();
 
         foreach (EnemyPawn target in pawnsInRadius)

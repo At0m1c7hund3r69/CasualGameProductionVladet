@@ -487,6 +487,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 752556768}
     m_Modifications:
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
+      propertyPath: moveSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
+      propertyPath: possessSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
+    - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
+      propertyPath: possessVfx
+      value: 
+      objectReference: {fileID: 3184214694423017164, guid: 295a1b657a6871d4994c94ea2420d1c2, type: 3}
+    - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: gridManager
       value: 
       objectReference: {fileID: 1473467923}
@@ -1435,6 +1447,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 752556768}
     m_Modifications:
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: moveSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: possessSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: possessVfx
+      value: 
+      objectReference: {fileID: 3184214694423017164, guid: 295a1b657a6871d4994c94ea2420d1c2, type: 3}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: gridManager
       value: 
@@ -5738,6 +5762,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 752556768}
     m_Modifications:
     - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
+      propertyPath: moveSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
+      propertyPath: possessSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
+    - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
+      propertyPath: possessVfx
+      value: 
+      objectReference: {fileID: 3184214694423017164, guid: 295a1b657a6871d4994c94ea2420d1c2, type: 3}
+    - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: gridManager
       value: 
       objectReference: {fileID: 1473467923}
@@ -6472,6 +6508,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 752556768}
     m_Modifications:
+    - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
+      propertyPath: moveSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
+      propertyPath: possessSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
+    - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
+      propertyPath: possessVfx
+      value: 
+      objectReference: {fileID: 3184214694423017164, guid: 295a1b657a6871d4994c94ea2420d1c2, type: 3}
     - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: gridManager
       value: 
@@ -7894,6 +7942,8 @@ MonoBehaviour:
   currentState: 0
   activeEnemies: []
   loseOnPossessedDeath: 0
+  PlayersTurnSfx: {fileID: 8300000, guid: f4d2fca36262cfd4e9e956522939698c, type: 3}
+  sfxVolume: 1
 --- !u!1001 &1096562331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9990,6 +10040,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 752556768}
     m_Modifications:
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
+      propertyPath: moveSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
+      propertyPath: possessSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
+    - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
+      propertyPath: possessVfx
+      value: 
+      objectReference: {fileID: 3184214694423017164, guid: 295a1b657a6871d4994c94ea2420d1c2, type: 3}
+    - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: gridManager
       value: 
       objectReference: {fileID: 1473467923}
@@ -10768,6 +10830,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 752556768}
     m_Modifications:
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: moveSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: possessSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: possessVfx
+      value: 
+      objectReference: {fileID: 3184214694423017164, guid: 295a1b657a6871d4994c94ea2420d1c2, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: gridManager
       value: 
       objectReference: {fileID: 1473467923}
@@ -11233,6 +11307,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 752556768}
     m_Modifications:
+    - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
+      propertyPath: moveSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
+      propertyPath: possessSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
+    - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
+      propertyPath: possessVfx
+      value: 
+      objectReference: {fileID: 3184214694423017164, guid: 295a1b657a6871d4994c94ea2420d1c2, type: 3}
     - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: gridManager
       value: 
@@ -12443,6 +12529,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 752556768}
     m_Modifications:
     - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
+      propertyPath: moveSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
+      propertyPath: possessSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
+    - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
+      propertyPath: possessVfx
+      value: 
+      objectReference: {fileID: 3184214694423017164, guid: 295a1b657a6871d4994c94ea2420d1c2, type: 3}
+    - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: gridManager
       value: 
       objectReference: {fileID: 1473467923}
@@ -13149,6 +13247,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 752556768}
     m_Modifications:
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: moveSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: possessSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: possessVfx
+      value: 
+      objectReference: {fileID: 3184214694423017164, guid: 295a1b657a6871d4994c94ea2420d1c2, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: gridManager
       value: 
       objectReference: {fileID: 1473467923}
@@ -13750,6 +13860,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 752556768}
     m_Modifications:
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: moveSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: possessSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: possessVfx
+      value: 
+      objectReference: {fileID: 3184214694423017164, guid: 295a1b657a6871d4994c94ea2420d1c2, type: 3}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: gridManager
       value: 

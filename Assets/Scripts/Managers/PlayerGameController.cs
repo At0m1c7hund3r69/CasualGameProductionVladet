@@ -41,10 +41,15 @@ public class PlayerGameController : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             EnemyPawn clickedPawn = hit.collider.GetComponent<EnemyPawn>();
+            if (clickedPawn == null) return;
 
             if (TurnManager.instance.currentState == TurnState.FirstBlood)
             {
-                if (!clickedPawn.isPossessed)
+
+                bool isPatrolUnit = clickedPawn.GetComponent<EnemyPatrol>() != null;
+                bool isPriestUnit = clickedPawn.GetComponent<PriestBehavior>() != null;
+
+                if (!clickedPawn.isPossessed && !isPatrolUnit && !isPriestUnit)
                 {
                     clickedPawn.Possess();
                     TurnManager.instance.currentState = TurnState.PlayerTurn;

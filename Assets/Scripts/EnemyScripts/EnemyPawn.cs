@@ -11,6 +11,15 @@ public class EnemyPawn : MonoBehaviour
     public Vector2Int coordinate;
     public bool isPossessed = false;
 
+    [Header("VFX")]
+    public GameObject possessVfx;
+    public Vector3 vfxOffset = new Vector3(0, 0.5f, 0);
+
+    [Header("SFX")]
+    public AudioClip possessSfx;
+    public AudioClip moveSfx;
+    [Range(0f, 1f)] public float sfxVolume = 1f;
+
     private Material originalMaterial;
     private Renderer pawnRenderer;
 
@@ -41,6 +50,17 @@ public class EnemyPawn : MonoBehaviour
     {
         if (isPossessed) return;
         isPossessed = true;
+
+        if (possessVfx != null)
+        {
+            GameObject vfx = Instantiate(possessVfx, transform.position + vfxOffset, Quaternion.identity);
+            Destroy(vfx, 1.5f);
+        }
+
+        if (possessSfx != null)
+        {
+            AudioSource.PlayClipAtPoint(possessSfx, Camera.main.transform.position, sfxVolume);
+        }
 
         if (meshRenderer  != null && possessedMaterial != null)
         {
@@ -125,8 +145,13 @@ public class EnemyPawn : MonoBehaviour
 
     public void ExecuteKillMove(EnemyPawn targetEnemy, Vector2Int targetCoord)
     {
-        GridNode targetNode = gridManager.Grid[targetCoord];
-        StartCoroutine(KillAndMoveCoroutine(targetEnemy, targetNode, targetCoord));
+        if (TurnManager.instance != null && targetEnemy  != null)
+        {
+            TurnManager.instance.CheckPawnDeathCondition(targetEnemy);
+        }
+
+            GridNode targetNode = gridManager.Grid[targetCoord];
+            StartCoroutine(KillAndMoveCoroutine(targetEnemy, targetNode, targetCoord));
     }
 
     private System.Collections.IEnumerator KillAndMoveCoroutine(EnemyPawn targetEnemy, GridNode targetNode, Vector2Int targetCoord)
@@ -134,6 +159,11 @@ public class EnemyPawn : MonoBehaviour
         if (TurnManager.instance != null)
         {
             TurnManager.instance.CheckPawnDeathCondition(this);
+        }
+
+        if (moveSfx != null && Camera.main != null)
+        {
+            AudioSource.PlayClipAtPoint(moveSfx, Camera.main.transform.position, sfxVolume);
         }
 
         if (TurnManager.instance) TurnManager.instance.UnRegisterEnemy(targetEnemy);
@@ -168,6 +198,11 @@ public class EnemyPawn : MonoBehaviour
 
     private System.Collections.IEnumerator SlideCoroutine(GridNode targetNode, Vector2Int targetCoord)
     {
+        if (moveSfx != null && Camera.main != null)
+        {
+            AudioSource.PlayClipAtPoint(moveSfx, Camera.main.transform.position, sfxVolume);
+        }
+
         gridManager.Grid[coordinate].IsOccupied = false;
         gridManager.Grid[coordinate].Occupant = null;
 
@@ -191,6 +226,11 @@ public class EnemyPawn : MonoBehaviour
 
     private System.Collections.IEnumerator BumpCoroutine(Vector3 targetWorldPos, EnemyPawn targetEnemy)
     {
+        if (moveSfx != null && Camera.main != null)
+        {
+            AudioSource.PlayClipAtPoint(moveSfx, Camera.main.transform.position, sfxVolume);
+        }
+
         Vector3 startPos = transform.position;
         Vector3 bumpPos = Vector3.Lerp(startPos, targetWorldPos, 0.5f);
 
