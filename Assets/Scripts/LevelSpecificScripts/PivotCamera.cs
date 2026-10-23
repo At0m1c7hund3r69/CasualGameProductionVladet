@@ -10,8 +10,18 @@ public class PivotCamera : MonoBehaviour
     [Header("Settings")]
     public float rotationSpeed = 0.2f;
     public float zoomSpeed = 0.05f;
-    public float minZoom = 2f;
-    public float maxZoom = 10f;
+    public float minPivotHeight = 2f;
+    public float maxPivotHeight = 10f;
+
+    private bool wasTwoFingersTouching = false;
+    private float prevPinchDistance = 0f;
+
+    private void Start()
+    {
+        float startY = transform.position.y;
+        if (startY < minPivotHeight) minPivotHeight = startY - 2f;
+        if (startY > maxPivotHeight) maxPivotHeight = startY + 5f;
+    }
 
     private void Update()
     {
@@ -23,27 +33,41 @@ public class PivotCamera : MonoBehaviour
 
         if (touch0active && touch1active)
         {
-            HandleRotation(touch);
+            HandleTwoFingerInput(touch);
+        }
+        else
+        {
+            wasTwoFingersTouching = false;
         }
     }
 
-    private void HandleRotation(Touchscreen touch)
+    private void HandleTwoFingerInput(Touchscreen touch)
     {
-        var touch0 = touch.touches[0];
-        var touch1 = touch.touches[1];
+        Vector2 pos0 = touch.touches[0].position.ReadValue();
+        Vector2 pos1 = touch.touches[1].position.ReadValue();
+        float currentPinchDistance = Vector2.Distance(pos0, pos1);
 
-        if (touch0.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Began ||
-            touch1.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Began ||
-            touch0.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Ended ||
-            touch1.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Ended)
+        if (!wasTwoFingersTouching)
         {
+            wasTwoFingersTouching = true;
+            prevPinchDistance = currentPinchDistance;
             return;
         }
 
-        float deltaX0 = touch0.delta.ReadValue().x;
-        float deltaX1 = touch1.delta.ReadValue().x;
-        float averageDeltaX = (deltaX0 + deltaX1) / 2f;
+        float deltaX0 = touch.touches[0].delta.ReadValue().x;
+        float deltaX1 = touch.touches[1].delta.ReadValue().x;
+        float averageDeltaX = (deltaX0 - deltaX1) * 0.5f;
 
         transform.Rotate(Vector3.up, averageDeltaX * rotationSpeed, Space.World);
+
+        float zoomDelta = currentPinchDistance - prevPinchDistance;
+        prevPinchDistance = currentPinchDistance;
+
+        Vector3 pivotPos = transform.position;
+
+        pivotPos.y -= zoomDelta * zoomSpeed;
+        pivotPos.y = Mathf.Clamp(pivotPos.y, minPivotHeight, maxPivotHeight);
+
+        transform.position = pivotPos;
     }
 }
