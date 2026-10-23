@@ -10,28 +10,24 @@ public class PivotCamera : MonoBehaviour
     [Header("Settings")]
     public float rotationSpeed = 0.2f;
     public float zoomSpeed = 0.05f;
-    public float minPivotHeight = 2f;
-    public float maxPivotHeight = 10f;
+    public float minFOV = 2f;
+    public float maxFOV = 10f;
+
+    public float pinchDeadzone = 2.5f;
 
     private bool wasTwoFingersTouching = false;
-    private float prevPinchDistance = 0f;
-
-    private void Start()
-    {
-        float startY = transform.position.y;
-        if (startY < minPivotHeight) minPivotHeight = startY - 2f;
-        if (startY > maxPivotHeight) maxPivotHeight = startY + 5f;
-    }
+    private Vector2 prevPos0;
+    private Vector2 prevPos1;
 
     private void Update()
     {
         var touch = Touchscreen.current;
-        if (touch == null) return;
+        if (touch == null || mainCamera == null) return;
 
-        bool touch0active = touch.touches[0].press.isPressed;
-        bool touch1active = touch.touches[1].press.isPressed;
+        bool touch0Active = touch.touches[0].press.isPressed;
+        bool touch1Active = touch.touches[1].press.isPressed;
 
-        if (touch0active && touch1active)
+        if (touch0Active && touch1Active)
         {
             HandleTwoFingerInput(touch);
         }
@@ -45,29 +41,43 @@ public class PivotCamera : MonoBehaviour
     {
         Vector2 pos0 = touch.touches[0].position.ReadValue();
         Vector2 pos1 = touch.touches[1].position.ReadValue();
-        float currentPinchDistance = Vector2.Distance(pos0, pos1);
 
         if (!wasTwoFingersTouching)
         {
             wasTwoFingersTouching = true;
-            prevPinchDistance = currentPinchDistance;
+            prevPos0 = pos0;
+            prevPos1 = pos1;
             return;
         }
 
-        float deltaX0 = touch.touches[0].delta.ReadValue().x;
-        float deltaX1 = touch.touches[1].delta.ReadValue().x;
-        float averageDeltaX = (deltaX0 - deltaX1) * 0.5f;
+        Vector2 delta0 = pos0 - prevPos0;
+        Vector2 delta1 = pos1 - prevPos1;
 
-        transform.Rotate(Vector3.up, averageDeltaX * rotationSpeed, Space.World);
+        float prevDistance = Vector2.Distance(prevPos0, prevPos1);
+        float currentDistance = Vector2.Distance(pos0, pos1);
 
-        float zoomDelta = currentPinchDistance - prevPinchDistance;
-        prevPinchDistance = currentPinchDistance;
+        prevPos0 = pos0;
+        prevPos1 = pos1;
 
-        Vector3 pivotPos = transform.position;
+        float averageDeltaX = (delta0.x + delta1.x) * 0.5f;
+        float zoomDelta = currentDistance - prevDistance;
 
-        pivotPos.y -= zoomDelta * zoomSpeed;
-        pivotPos.y = Mathf.Clamp(pivotPos.y, minPivotHeight, maxPivotHeight);
-
-        transform.position = pivotPos;
+        if (Mathf.Abs(averageDeltaX) > Mathf.Abs(zoomDelta) || Mathf.Abs(zoomDelta) < pinchDeadzone)
+        {
+            transform.Rotate(Vector3.up, averageDeltaX * rotationSpeed, Space.World);
+        }
+        else
+        {
+            if (mainCamera.orthographic)
+            {
+                mainCamera.orthographicSize -= zoomDelta * (zoomDelta * 0.1f);
+                mainCamera.orthographicSize = Mathf.Clamp(mainCamera.orthographicSize, 2f, 12f);
+            }
+            else
+            {
+                mainCamera.fieldOfView -= zoomDelta * zoomSpeed;
+                mainCamera.fieldOfView = Mathf.Clamp(mainCamera.fieldOfView, minFOV, maxFOV);
+            }
+        }
     }
 }
