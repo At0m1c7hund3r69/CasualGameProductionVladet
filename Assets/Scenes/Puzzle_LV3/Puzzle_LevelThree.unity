@@ -11029,8 +11029,9 @@ MonoBehaviour:
   mainCamera: {fileID: 961739752}
   rotationSpeed: 0.2
   zoomSpeed: 0.05
-  minZoom: 2
-  maxZoom: 10
+  minFOV: 25
+  maxFOV: 70
+  pinchDeadzone: 2.5
 --- !u!4 &1764013018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9cb912bef3ebd4f47808854a48fb8e88, type: 3}

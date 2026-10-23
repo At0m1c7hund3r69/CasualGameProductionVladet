@@ -10,8 +10,8 @@ public class PivotCamera : MonoBehaviour
     [Header("Settings")]
     public float rotationSpeed = 0.2f;
     public float zoomSpeed = 0.05f;
-    public float minFOV = 2f;
-    public float maxFOV = 10f;
+    public float minFOV = 25f;
+    public float maxFOV = 70f;
 
     public float pinchDeadzone = 2.5f;
 
