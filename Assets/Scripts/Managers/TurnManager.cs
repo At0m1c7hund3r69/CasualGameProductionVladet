@@ -146,6 +146,7 @@ public class TurnManager : MonoBehaviour
 
             currentState = TurnState.PlayerTurn;
             Debug.Log("Player Turn");
+            TurnCounter.Instance.NextTurn(1); //Added by Chris. This calls to my turn counter script to update it in the UI
         }
     }
 
