@@ -4,17 +4,28 @@ using TMPro;
 public class TurnCounter : MonoBehaviour
 {
     public static TurnCounter Instance;
-    [SerializeField] private TMP_Text TurnText;
+    [SerializeField] private TMP_Text turnText;
+    private int currentTurn = 1;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-        
+        if (Instance == null) { Instance = this; }
+        else { Destroy(gameObject); }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        UpdateTurnUI();
+    }
+
+    public void NextTurn(int amount)
+    {
+        currentTurn += amount;
+        UpdateTurnUI();
+    }
+
+    private void UpdateTurnUI()
+    {
+        turnText.text = "" +currentTurn;
     }
 }
