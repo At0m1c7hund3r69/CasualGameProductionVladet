@@ -18,7 +18,7 @@ public class VillegersLeft : MonoBehaviour
         UpdateVillagerUI();
     }
 
-    public void NextTurn(int amount)
+    public void Villagers(int amount)
     {
         villagerAmount += amount;
         UpdateVillagerUI();
