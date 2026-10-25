@@ -109,6 +109,15 @@ public class EnemyPawn : MonoBehaviour
                     StartCoroutine(BumpCoroutine(targetNode.WorldPosition, targetEnemy));
                     return true;
                 }
+
+                InteractableObject interactable = targetNode.Occupant.GetComponent<InteractableObject>();
+
+                if (interactable != null)
+                {
+                    interactable.TriggerInteraction();
+                    targetNode.Occupant = null;
+                    return true;
+                }
             }
             return false;
         }

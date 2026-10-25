@@ -1,8 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-//development
-
 [RequireComponent(typeof(EnemyPawn))]
 public class EnemyPatrol : MonoBehaviour
 {
@@ -23,11 +21,23 @@ public class EnemyPatrol : MonoBehaviour
         if (moveSequence.Count == 0 || pawn.isPossessed) return;
         
         Vector2Int direction = moveSequence[currentStep];
+        PawnSightline sightline = GetComponent<PawnSightline>();
+        
+        if (sightline != null)
+        {
+            sightline.Rotate(direction);
+        }
+
         bool moveSuccessful = pawn.ExecuteAIMove(direction);
 
         if (moveSuccessful)
         {
             currentStep = (currentStep + 1) % moveSequence.Count;
+        }
+
+        if (sightline != null)
+        {
+            sightline.CheckLineOfSight();
         }
     }
 }

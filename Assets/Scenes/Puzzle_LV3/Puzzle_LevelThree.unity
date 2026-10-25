@@ -4872,7 +4872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
   gridManager: {fileID: 50017851}
   baseUnit: {fileID: 1102297009}
-  lookDirection: {x: 1, y: 0}
+  lookDirection: {x: 0, y: 1}
   sightRange: 1
 --- !u!1001 &1113120947
 PrefabInstance:
@@ -5407,7 +5407,7 @@ MonoBehaviour:
   gridManager: {fileID: 50017851}
   baseUnit: {fileID: 1212628345}
   lookDirection: {x: 0, y: -1}
-  sightRange: 2
+  sightRange: 1
 --- !u!1001 &1234236721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6823,7 +6823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
   gridManager: {fileID: 50017851}
   baseUnit: {fileID: 1586142753}
-  lookDirection: {x: 0, y: 1}
+  lookDirection: {x: 1, y: 0}
   sightRange: 1
 --- !u!1001 &1601725527
 PrefabInstance:
