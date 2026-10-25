@@ -5,7 +5,7 @@ public class VillegersLeft : MonoBehaviour
 {
     public static VillegersLeft Instance;
     [SerializeField] private TMP_Text villagersLeftText;
-    private int villagerAmount = 1;
+    public int villagerAmount = 10;
 
     private void Awake()
     {
@@ -26,6 +26,6 @@ public class VillegersLeft : MonoBehaviour
 
     private void UpdateVillagerUI()
     {
-        villagersLeftText.text = "" +villagerAmount;
+        villagersLeftText.text = "" + villagerAmount;
     }
 }
