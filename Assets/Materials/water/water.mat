@@ -66,6 +66,6 @@ Material:
     m_Colors:
     - _water_angle: {r: 1, g: 0, b: 0, a: 0}
     - _water_angle_1: {r: 1, g: 0, b: 0, a: 0}
-    - _water_color: {r: 0.23166609, g: 0.33846566, b: 0.3584906, a: 1}
+    - _water_color: {r: 0.2572535, g: 0.36647263, b: 0.38679248, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
