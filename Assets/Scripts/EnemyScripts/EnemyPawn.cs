@@ -51,6 +51,11 @@ public class EnemyPawn : MonoBehaviour
         if (isPossessed) return;
         isPossessed = true;
 
+        if (VillegersLeft.Instance != null) //This was added by chris. Calls the VillegersLeft Script to lower it once an enemy is possessd
+        {
+            VillegersLeft.Instance.Villagers(-1);
+        }
+
         if (possessVfx != null)
         {
             GameObject vfx = Instantiate(possessVfx, transform.position + vfxOffset, Quaternion.identity);
@@ -166,7 +171,7 @@ public class EnemyPawn : MonoBehaviour
             AudioSource.PlayClipAtPoint(moveSfx, Camera.main.transform.position, sfxVolume);
         }
 
-        if (TurnManager.instance) TurnManager.instance.UnRegisterEnemy(targetEnemy);
+        if (TurnManager.instance)TurnManager.instance.UnRegisterEnemy(targetEnemy);
         Destroy(targetEnemy.gameObject);
 
         gridManager.Grid[coordinate].IsOccupied = false;
