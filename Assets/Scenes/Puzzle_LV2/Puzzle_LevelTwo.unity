@@ -10801,6 +10801,10 @@ PrefabInstance:
       propertyPath: cameraLookScript
       value: 
       objectReference: {fileID: 1352863176}
+    - target: {fileID: 1749940574607735289, guid: 9f334c55a616d844788956d12dd5870b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 287
+      objectReference: {fileID: 0}
     - target: {fileID: 6467472978352201237, guid: 9f334c55a616d844788956d12dd5870b, type: 3}
       propertyPath: m_Name
       value: LevelUI
@@ -10809,6 +10813,10 @@ PrefabInstance:
       propertyPath: cameraLookScript
       value: 
       objectReference: {fileID: 1352863176}
+    - target: {fileID: 7923837849395671019, guid: 9f334c55a616d844788956d12dd5870b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 486.00003
+      objectReference: {fileID: 0}
     - target: {fileID: 8539232745642237976, guid: 9f334c55a616d844788956d12dd5870b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1159.149

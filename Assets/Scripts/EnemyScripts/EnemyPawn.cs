@@ -51,7 +51,7 @@ public class EnemyPawn : MonoBehaviour
         if (isPossessed) return;
         isPossessed = true;
 
-        if (VillegersLeft.Instance != null)
+        if (VillegersLeft.Instance != null) //This was added by chris. Calls the VillegersLeft Script to lower it once an enemy is possessd
         {
             VillegersLeft.Instance.Villagers(-1);
         }
