@@ -1,6 +1,8 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class InteractableObject : MonoBehaviour
     public AudioClip unlockSfx;
     public GameObject unlockVfx;
     [Range(0f, 1f)] public float sfxVolume = 1f;
+    public TurnState currentState;
 
     public void TriggerInteraction()
     {
@@ -25,5 +28,18 @@ public class InteractableObject : MonoBehaviour
         }
 
         onInteract.Invoke();
+
+        StartCoroutine(ExecuteAfterDelay(2.0f));
+    }
+
+    IEnumerator ExecuteAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (TurnManager.instance != null)
+        {
+            TurnManager.instance.currentState = TurnState.LevelComplete;
+            SceneManager.LoadScene("WinScreen");
+        }
     }
 }
