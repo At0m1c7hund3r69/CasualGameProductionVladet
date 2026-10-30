@@ -1270,6 +1270,7 @@ GameObject:
   - component: {fileID: 783170575}
   - component: {fileID: 783170574}
   - component: {fileID: 783170578}
+  - component: {fileID: 783170579}
   m_Layer: 0
   m_Name: TestPriestPossession
   m_TagString: Untagged
@@ -1391,6 +1392,19 @@ MonoBehaviour:
   possessSfx: {fileID: 0}
   moveSfx: {fileID: 0}
   sfxVolume: 1
+--- !u!114 &783170579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783170573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e39c196e0615544d8c607160a66d2ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WinOnPossess
+  winDelay: 1.5
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
