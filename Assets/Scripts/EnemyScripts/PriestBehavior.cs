@@ -82,11 +82,11 @@ public class PriestBehavior : MonoBehaviour
         List<EnemyPawn> affectedPawns = new List<EnemyPawn>();
         Vector2Int center = pawn.coordinate;
 
-        for (int x = -radius;  x <= radius; x++)
+        for (int x = -radius; x <= radius; x++)
         {
             for (int y = -radius; y <= radius; y++)
             {
-                if (Mathf.Abs(x) +  Mathf.Abs(y) <= radius)
+                if (radius == 0 || Mathf.Abs(x) != radius || Mathf.Abs(y) != radius)
                 {
                     Vector2Int checkCoord = center + new Vector2Int(x, y);
 
