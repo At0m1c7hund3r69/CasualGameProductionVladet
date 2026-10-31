@@ -38,5 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle_LV4/Puzzle_LevelFour.unity
     guid: 8d4bf2ad3c43d084e858cf3240f64e3a
+  - enabled: 1
+    path: Assets/Scenes/Puzzle_LV5/Puzzle_LevelFive.unity
+    guid: 4cfbc6ca14a0c0f42ae4557a2c4dc65b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
