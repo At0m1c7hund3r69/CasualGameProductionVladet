@@ -276,11 +276,11 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: coordinate.x
-      value: 12
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: coordinate.y
-      value: 6
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: m_LocalScale.x
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 55771572}
   lookDirection: {x: 1, y: 0}
   sightRange: 1
@@ -470,11 +470,11 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: coordinate.x
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: coordinate.y
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: possessedMaterial
@@ -576,12 +576,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPatrol
   moveSequence:
-  - {x: 0, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: 1}
-  - {x: 0, y: 1}
-  - {x: 0, y: 1}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
 --- !u!114 &129172012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,7 +596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 129172010}
   lookDirection: {x: -1, y: 0}
   sightRange: 1
@@ -629,11 +631,11 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.x
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.y
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: m_LocalScale.x
@@ -731,9 +733,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 173244462}
-  lookDirection: {x: 0, y: 1}
+  lookDirection: {x: 0, y: -1}
   sightRange: 1
 --- !u!4 &173244464 stripped
 Transform:
@@ -986,11 +988,11 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: coordinate.x
-      value: 6
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: coordinate.y
-      value: 12
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: m_LocalScale.x
@@ -1084,9 +1086,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 401675173}
-  lookDirection: {x: 1, y: 0}
+  lookDirection: {x: -1, y: 0}
   sightRange: 1
 --- !u!4 &401675175 stripped
 Transform:
@@ -1197,11 +1199,11 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: coordinate.x
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: coordinate.y
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: possessedMaterial
@@ -1303,12 +1305,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPatrol
   moveSequence:
-  - {x: 0, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: 1}
-  - {x: 0, y: 1}
-  - {x: 0, y: 1}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
 --- !u!114 &585195347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,7 +1325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 585195345}
   lookDirection: {x: -1, y: 0}
   sightRange: 1
@@ -1503,11 +1507,11 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.x
-      value: 11
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.y
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: m_LocalScale.x
@@ -1605,9 +1609,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 645957538}
-  lookDirection: {x: 0, y: 1}
+  lookDirection: {x: 0, y: -1}
   sightRange: 1
 --- !u!4 &645957540 stripped
 Transform:
@@ -1782,11 +1786,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.x
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 996786760059002202, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -2005,11 +2009,11 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.x
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.y
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: m_LocalScale.x
@@ -2107,9 +2111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 868544075}
-  lookDirection: {x: 0, y: 1}
+  lookDirection: {x: 0, y: -1}
   sightRange: 1
 --- !u!4 &868544077 stripped
 Transform:
@@ -2216,11 +2220,11 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.x
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.y
-      value: 11
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: m_LocalScale.x
@@ -2318,7 +2322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 922798085}
   lookDirection: {x: 0, y: 1}
   sightRange: 1
@@ -2474,7 +2478,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 6c0abb9d324e94d438627edb8f539a52, type: 3}
       propertyPath: coordinate.x
-      value: 2
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100051709422629572, guid: 6c0abb9d324e94d438627edb8f539a52, type: 3}
+      propertyPath: coordinate.y
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 6c0abb9d324e94d438627edb8f539a52, type: 3}
       propertyPath: possessedMaterial
@@ -2567,7 +2575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5cf5585ee3891e40a64ba01d50718b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PriestBehavior
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   radius: 2
   turnsToActivate: 3
   priestWaveVfx: {fileID: 1561067341896706274, guid: aefb090f2eda6f14ab06a8b4ae0525a8, type: 3}
@@ -2609,11 +2617,11 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: coordinate.x
-      value: 11
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: coordinate.y
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2707,9 +2715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 1022497201}
-  lookDirection: {x: 0, y: -1}
+  lookDirection: {x: -1, y: 0}
   sightRange: 1
 --- !u!4 &1022497203 stripped
 Transform:
@@ -2901,11 +2909,11 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: coordinate.x
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: coordinate.y
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: possessedMaterial
@@ -3007,12 +3015,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPatrol
   moveSequence:
-  - {x: 0, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: 1}
-  - {x: 0, y: 1}
-  - {x: 0, y: 1}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
 --- !u!114 &1116382403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3025,7 +3035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 1116382401}
   lookDirection: {x: -1, y: 0}
   sightRange: 1
@@ -3064,11 +3074,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 996786760059002202, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -3305,7 +3315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: coordinate.y
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: possessedMaterial
@@ -3409,8 +3419,6 @@ MonoBehaviour:
   moveSequence:
   - {x: 0, y: -1}
   - {x: 0, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: 1}
   - {x: 0, y: 1}
   - {x: 0, y: 1}
 --- !u!114 &1317037632
@@ -3425,7 +3433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 1317037630}
   lookDirection: {x: -1, y: 0}
   sightRange: 1
@@ -3464,7 +3472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: coordinate.x
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: coordinate.y
@@ -3894,11 +3902,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.x
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.y
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 996786760059002202, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -4000,11 +4008,11 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: coordinate.x
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: coordinate.y
-      value: 11
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: m_LocalScale.x
@@ -4098,9 +4106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 1574739549}
-  lookDirection: {x: 0, y: -1}
+  lookDirection: {x: 1, y: 0}
   sightRange: 1
 --- !u!4 &1574739551 stripped
 Transform:
@@ -4211,11 +4219,11 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: coordinate.x
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: coordinate.y
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: possessedMaterial
@@ -4317,12 +4325,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPatrol
   moveSequence:
-  - {x: 0, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: 1}
-  - {x: 0, y: 1}
-  - {x: 0, y: 1}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
 --- !u!114 &1638613665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4335,7 +4345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 1638613663}
   lookDirection: {x: -1, y: 0}
   sightRange: 1
@@ -4452,7 +4462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: coordinate.y
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: possessedMaterial
@@ -4554,12 +4564,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPatrol
   moveSequence:
-  - {x: 0, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: 1}
-  - {x: 0, y: 1}
-  - {x: 0, y: 1}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
+  - {x: -1, y: 0}
+  - {x: -1, y: 0}
 --- !u!114 &1714640534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4572,7 +4580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 1714640532}
   lookDirection: {x: -1, y: 0}
   sightRange: 1
@@ -4664,6 +4672,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bfbf1cdffbaeaab48b7c2bee978010e0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1715824489}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bfbf1cdffbaeaab48b7c2bee978010e0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1715824491}
   m_SourcePrefab: {fileID: 100100000, guid: bfbf1cdffbaeaab48b7c2bee978010e0, type: 3}
 --- !u!1 &1715824488 stripped
 GameObject:
@@ -4684,7 +4695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPawn
   gridManager: {fileID: 1000881763}
   possessedMaterial: {fileID: 0}
-  coordinate: {x: 12, y: 12}
+  coordinate: {x: 11, y: 11}
   isPossessed: 0
   possessVfx: {fileID: 0}
   vfxOffset: {x: 0, y: 0.5, z: 0}
@@ -4696,6 +4707,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bfbf1cdffbaeaab48b7c2bee978010e0, type: 3}
   m_PrefabInstance: {fileID: 1715824487}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1715824491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715824488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e39c196e0615544d8c607160a66d2ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WinOnPossess
+  winDelay: 1.5
 --- !u!1001 &1768450399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5396,7 +5420,7 @@ PrefabInstance:
       objectReference: {fileID: 1000881763}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: coordinate.x
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: coordinate.y
@@ -5502,12 +5526,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPatrol
   moveSequence:
-  - {x: 0, y: -1}
-  - {x: 0, y: -1}
-  - {x: 0, y: -1}
   - {x: 0, y: 1}
   - {x: 0, y: 1}
-  - {x: 0, y: 1}
+  - {x: 0, y: -1}
+  - {x: 0, y: -1}
 --- !u!114 &2031004125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5520,7 +5542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da56b5908b4da97478eca268af33c3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PawnSightline
-  gridManager: {fileID: 0}
+  gridManager: {fileID: 1000881763}
   baseUnit: {fileID: 2031004123}
   lookDirection: {x: -1, y: 0}
   sightRange: 1
