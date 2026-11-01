@@ -16206,7 +16206,7 @@ MonoBehaviour:
   currentState: 0
   activeEnemies: []
   loseOnPossessedDeath: 1
-  PlayersTurnSfx: {fileID: 8300000, guid: f4d2fca36262cfd4e9e956522939698c, type: 3}
+  PlayersTurnSfx: {fileID: 8300000, guid: 9e57d1bee4a417240b57d5b9543ef3bf, type: 3}
   sfxVolume: 0.1
 --- !u!4 &2110634818
 Transform:

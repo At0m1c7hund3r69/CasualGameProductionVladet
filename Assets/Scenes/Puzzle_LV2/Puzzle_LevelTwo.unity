@@ -491,6 +491,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
+      propertyPath: sfxVolume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: possessSfx
       value: 
       objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
@@ -1005,6 +1009,10 @@ PrefabInstance:
       propertyPath: moveSfx
       value: 
       objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: sfxVolume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: possessSfx
       value: 
@@ -3699,6 +3707,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
     - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
+      propertyPath: sfxVolume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: possessSfx
       value: 
       objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
@@ -4114,6 +4126,10 @@ PrefabInstance:
       propertyPath: moveSfx
       value: 
       objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
+      propertyPath: sfxVolume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: possessSfx
       value: 
@@ -4814,6 +4830,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6989057459710421618, guid: 08c7a5dc9e41ea344ac68c93ec694281, type: 3}
+      propertyPath: weight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5334,8 +5354,8 @@ MonoBehaviour:
   currentState: 0
   activeEnemies: []
   loseOnPossessedDeath: 0
-  PlayersTurnSfx: {fileID: 8300000, guid: f4d2fca36262cfd4e9e956522939698c, type: 3}
-  sfxVolume: 1
+  PlayersTurnSfx: {fileID: 8300000, guid: 9e57d1bee4a417240b57d5b9543ef3bf, type: 3}
+  sfxVolume: 0.1
 --- !u!1001 &1096562331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6960,6 +6980,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
+      propertyPath: sfxVolume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: possessSfx
       value: 
       objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
@@ -7788,6 +7812,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: sfxVolume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: possessSfx
       value: 
       objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
@@ -8265,6 +8293,10 @@ PrefabInstance:
       propertyPath: moveSfx
       value: 
       objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
+      propertyPath: sfxVolume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: possessSfx
       value: 
@@ -9341,6 +9373,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
     - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
+      propertyPath: sfxVolume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: possessSfx
       value: 
       objectReference: {fileID: 8300000, guid: e86b12a3a501bb6418a74684c2b7b806, type: 3}
@@ -9629,6 +9665,10 @@ PrefabInstance:
       propertyPath: moveSfx
       value: 
       objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: sfxVolume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: possessSfx
       value: 
@@ -9948,6 +9988,10 @@ PrefabInstance:
       propertyPath: moveSfx
       value: 
       objectReference: {fileID: 8300000, guid: 81928db03a8729d429edc92abadf47a7, type: 3}
+    - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
+      propertyPath: sfxVolume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
       propertyPath: possessSfx
       value: 
