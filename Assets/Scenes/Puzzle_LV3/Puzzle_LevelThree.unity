@@ -822,6 +822,10 @@ PrefabInstance:
       propertyPath: possessedMaterial
       value: 
       objectReference: {fileID: 2100000, guid: cee5f8c5f122f10458410e72f1975edd, type: 2}
+    - target: {fileID: 4980516073631890331, guid: 6c0abb9d324e94d438627edb8f539a52, type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: 6c0abb9d324e94d438627edb8f539a52, type: 3}
       propertyPath: m_LocalScale.x
       value: 15
