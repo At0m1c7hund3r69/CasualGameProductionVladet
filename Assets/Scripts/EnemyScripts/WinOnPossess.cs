@@ -29,7 +29,7 @@ public class WinOnPossess : MonoBehaviour
         if (TurnManager.instance != null)
         {
             TurnManager.instance.currentState = TurnState.LevelComplete;
-            SceneManager.LoadScene("WinScreen");
+            SceneManager.LoadScene("EndGame");
         }
     }
 }
