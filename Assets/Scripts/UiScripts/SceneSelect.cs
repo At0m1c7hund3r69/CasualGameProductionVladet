@@ -54,6 +54,21 @@ public class SceneSelect : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelect"); //Changes scene to the sceneSelect
     }
 
+    public void Credits()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Credits"); //Changes scene to the credits
+    }
+
+    public void OpeningCutscene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("OpeningCutscene"); //Changes scene to the OpeningCutscene
+    }
+
+    public void Title()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("TitleScreen"); //Changes scene to the TitleScreen
+    }
+
 
     public void Endgame()
     {
