@@ -232,7 +232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 22.029358, y: 13.002747}
+  m_AnchoredPosition: {x: 20.318611, y: 13.002747}
   m_SizeDelta: {x: 1564, y: 1563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &94680026
@@ -425,7 +425,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\"It\u2019s said a day came when King Ivan grew tired and frustrated and ordered the destruction of a town demanding his downfall. The town was raided and burned to ash, many gone, and the survivors without a home. The people were outraged, yet this is when the truth was revealed.\u201D "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_margin: {x: -507.31927, y: 2.373108, z: -454.2898, w: -241.20837}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &95798645
@@ -540,7 +540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 22.029358, y: 13.002747}
+  m_AnchoredPosition: {x: 20.318611, y: 13.002747}
   m_SizeDelta: {x: 1564, y: 1563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &104069753
@@ -960,7 +960,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '??? '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_margin: {x: -507.31927, y: 233.18561, z: 279.2633, w: -258.29147}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &173891237
@@ -1412,7 +1412,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: " \u201CHehe.. HAHAHAHAHa..\u201D "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1479,7 +1479,7 @@ MonoBehaviour:
   m_margin: {x: -507.31927, y: 2.373108, z: -454.2898, w: -241.20837}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &254438646
@@ -1866,7 +1866,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 22.029358, y: 13.002747}
+  m_AnchoredPosition: {x: 20.318611, y: 13.002747}
   m_SizeDelta: {x: 1564, y: 1563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &511530235
@@ -2528,8 +2528,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201COnce upon the time, there was a witch named Misha, advisor to our great king Ivan. To all except the king, she used her magic to peer into the hearts and souls of all who entered the kingdoms court.\u201D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
+  m_sharedMaterial: {fileID: 5832200455566745196, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2559,7 +2559,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3844,7 +3844,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201CSo this is how they teach the public about what happened, as though it\u2019s all just a fantasy.\u201D "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3875,7 +3875,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3911,7 +3911,7 @@ MonoBehaviour:
   m_margin: {x: -507.31927, y: 2.373108, z: -454.2898, w: -241.20837}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1227313244
@@ -3981,7 +3981,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: " \u201CIf it\u2019s all just parts in a play to them I suppose it\u2019s time I took my role.\u201D "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4012,7 +4012,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4048,7 +4048,7 @@ MonoBehaviour:
   m_margin: {x: -507.31927, y: 2.373108, z: -454.2898, w: -241.20837}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1264384106
@@ -4642,7 +4642,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -604, y: -349}
+  m_AnchoredPosition: {x: -644, y: -349}
   m_SizeDelta: {x: 1564, y: 1563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1483875936
@@ -5023,7 +5023,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Misha '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5054,7 +5054,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -5090,7 +5090,7 @@ MonoBehaviour:
   m_margin: {x: -507.31927, y: 233.18561, z: 279.2633, w: -258.29147}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1512195001
@@ -5285,7 +5285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5630759, y: 36.2}
+  m_AnchoredPosition: {x: 1.5630759, y: 39.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752066336
@@ -5310,8 +5310,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201CMisha was conducting Ivan like a puppet, making him an enemy to the public. Regaining his mind, Ivan ordered Misha to be executed for her crimes. Misha fled, escaping her punishment. People still question the story, unsure if the kings\u2019 words were true. One truth remains, Misha may still be wandering the kingdom, waiting near the village she grew up in, preparing her reven- \u201C "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
+  m_sharedMaterial: {fileID: 5832200455566745196, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5341,7 +5341,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -5523,7 +5523,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Misha '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5554,7 +5554,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -5590,7 +5590,7 @@ MonoBehaviour:
   m_margin: {x: -507.31927, y: 233.18561, z: 279.2633, w: -258.29147}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1765550321
@@ -5963,7 +5963,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -604, y: -349}
+  m_AnchoredPosition: {x: -644, y: -349}
   m_SizeDelta: {x: 1564, y: 1563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1871911500
@@ -6134,7 +6134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -604, y: -349}
+  m_AnchoredPosition: {x: -644, y: -349}
   m_SizeDelta: {x: 1564, y: 1563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1918355070
@@ -6366,7 +6366,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u201CMistrust often spread about Misha, saying a day would come where she would take kings mind to do her bidding, yet they remained as just Rumors. Because of this and king\u2019s Ivan\u2019s policies, it made him unpopular, and lead way to uprisings in the villages.\u201D "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6397,7 +6397,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -6433,7 +6433,7 @@ MonoBehaviour:
   m_margin: {x: -507.31927, y: 2.373108, z: -454.2898, w: -241.20837}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1954001264
