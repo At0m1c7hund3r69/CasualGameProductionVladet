@@ -658,11 +658,11 @@ PrefabInstance:
       objectReference: {fileID: 346882999}
     - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: coordinate.x
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: coordinate.y
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: m_LocalScale.x
@@ -2537,11 +2537,11 @@ PrefabInstance:
       objectReference: {fileID: 346882999}
     - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: coordinate.x
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: coordinate.y
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: 709c90499557e1d47b310c1827761749, type: 3}
       propertyPath: m_LocalScale.x
@@ -3377,11 +3377,11 @@ PrefabInstance:
       objectReference: {fileID: 346882999}
     - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: coordinate.x
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: coordinate.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: ec6a9a1a4e4102d43b0e26a63624477b, type: 3}
       propertyPath: m_LocalScale.x
@@ -4435,6 +4435,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2242934446546938256, guid: 5d6fd59ea3e76084b88a595cc6baaeb9, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4080020986737415733, guid: 5d6fd59ea3e76084b88a595cc6baaeb9, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5816592140537707359, guid: 5d6fd59ea3e76084b88a595cc6baaeb9, type: 3}
       propertyPath: m_Name
       value: LevelUI(Level1)
@@ -5539,11 +5547,11 @@ PrefabInstance:
       objectReference: {fileID: 346882999}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.x
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100051709422629572, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: coordinate.y
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6413606218541850481, guid: 63dac9a13354957448d38e7126ecaa65, type: 3}
       propertyPath: m_LocalScale.x

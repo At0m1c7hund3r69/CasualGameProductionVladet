@@ -5958,6 +5958,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 280612856515023352, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4397f579d2757bd4ca4c5a6a91a8c247, type: 2}
+    - target: {fileID: 280612856515023352, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6878061538349370012, guid: 4397f579d2757bd4ca4c5a6a91a8c247, type: 2}
+    - target: {fileID: 280612856515023352, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455185477311099296, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4397f579d2757bd4ca4c5a6a91a8c247, type: 2}
+    - target: {fileID: 455185477311099296, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 679055004323208638, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4397f579d2757bd4ca4c5a6a91a8c247, type: 2}
+    - target: {fileID: 679055004323208638, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6878061538349370012, guid: 4397f579d2757bd4ca4c5a6a91a8c247, type: 2}
+    - target: {fileID: 679055004323208638, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 797512612861174252, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -32.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1811414812285520241, guid: 4206db06de470da47ba431c2697e2044, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5969,6 +6005,22 @@ PrefabInstance:
     - target: {fileID: 1811414812285520241, guid: 4206db06de470da47ba431c2697e2044, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504016081746814780, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4397f579d2757bd4ca4c5a6a91a8c247, type: 2}
+    - target: {fileID: 2504016081746814780, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210498189162954615, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 83.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210498189162954615, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13.5
       objectReference: {fileID: 0}
     - target: {fileID: 5198814951632564020, guid: 4206db06de470da47ba431c2697e2044, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6018,9 +6070,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5728183242862890403, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4397f579d2757bd4ca4c5a6a91a8c247, type: 2}
+    - target: {fileID: 5728183242862890403, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838854250846419986, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 478
+      objectReference: {fileID: 0}
     - target: {fileID: 6561561825604038566, guid: 4206db06de470da47ba431c2697e2044, type: 3}
       propertyPath: m_text
       value: "Goal: \nTake control of a starting villager and possess the ones that remain\n\nDefeat Condition:\nAll possessed villagers are killed "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561561825604038566, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4397f579d2757bd4ca4c5a6a91a8c247, type: 2}
+    - target: {fileID: 6561561825604038566, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6878061538349370012, guid: 4397f579d2757bd4ca4c5a6a91a8c247, type: 2}
+    - target: {fileID: 6561561825604038566, guid: 4206db06de470da47ba431c2697e2044, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7291877430638284268, guid: 4206db06de470da47ba431c2697e2044, type: 3}
       propertyPath: m_Name
