@@ -69,6 +69,11 @@ public class SceneSelect : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("TitleScreen"); //Changes scene to the TitleScreen
     }
 
+    public void FinalCutscene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("EndGame"); //Changes scene to the EndGame
+    }
+
 
     public void Endgame()
     {
