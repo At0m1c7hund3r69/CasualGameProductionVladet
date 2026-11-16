@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f436aabab31b85e4381312555689fc61
+guid: b5dfea9f0c549b242b33e8fe2b77fce1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2608171904239678541
-    second: Vladet_0
+      213: -3185508763433048759
+    second: SettingsBlack_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vladet_0
+      name: SettingsBlack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3300
-        height: 1098
+        width: 1522
+        height: 871
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d443c593786123420800000000000000
-      internalID: 2608171904239678541
+      spriteID: 945edae38accac3d0800000000000000
+      internalID: -3185508763433048759
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Vladet_0: 2608171904239678541
+      SettingsBlack_0: -3185508763433048759
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
