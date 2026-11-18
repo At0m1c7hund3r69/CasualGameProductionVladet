@@ -53,5 +53,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Credits.unity
     guid: 0dd64ddef66c8954e86b2f11a2600a67
+  - enabled: 1
+    path: Assets/Scenes/Rivals Mode/Rivals_Mode.unity
+    guid: 495b4a7095e3ce44dae48d8dbaf355c0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

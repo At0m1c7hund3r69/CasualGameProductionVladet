@@ -21,7 +21,10 @@ MonoBehaviour:
   m_ActivePlatformGuid: 
   m_AdditionalPlatformBuildSettings: []
   m_OverrideGlobalSceneList: 0
-  m_Scenes: []
+  m_Scenes:
+  - m_enabled: 1
+    m_path: Assets/Scenes/Menus/LevelSelect.unity
+    m_guid: c19e411679a3e2649b29d0bb664851c9
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:

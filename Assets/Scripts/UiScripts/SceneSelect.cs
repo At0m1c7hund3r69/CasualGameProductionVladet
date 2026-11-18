@@ -48,6 +48,10 @@ public class SceneSelect : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Puzzle_LevelFive"); //Changes scene to the lv4
     }
 
+    public void Rivals_Mode()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Rivals_Mode"); //Changes scene to the rivals mode
+    }
 
     public void LevelSelect()
     {
