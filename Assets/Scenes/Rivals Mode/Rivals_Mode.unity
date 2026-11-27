@@ -668,11 +668,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4720313944716215912, guid: b4042903aaa052e4eb17df83aa7be535, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1087
+      value: 991
       objectReference: {fileID: 0}
     - target: {fileID: 6236458053556122847, guid: b4042903aaa052e4eb17df83aa7be535, type: 3}
       propertyPath: m_Name
       value: LevelUI(RivalsMode)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029074109064962757, guid: b4042903aaa052e4eb17df83aa7be535, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
+    - target: {fileID: 7029074109064962757, guid: b4042903aaa052e4eb17df83aa7be535, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5832200455566745196, guid: ccda2c827ebdd6e4da850bda50b51f75, type: 2}
+    - target: {fileID: 7029074109064962757, guid: b4042903aaa052e4eb17df83aa7be535, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7114118873230525729, guid: b4042903aaa052e4eb17df83aa7be535, type: 3}
       propertyPath: m_AnchoredPosition.y

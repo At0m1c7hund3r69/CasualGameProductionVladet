@@ -5,6 +5,7 @@ public class TurnCounter : MonoBehaviour
 {
     public static TurnCounter Instance;
     [SerializeField] private TMP_Text turnText;
+    [SerializeField] private TMP_Text playerText;
     private int currentTurn = 1;
 
     private void Awake()
@@ -27,5 +28,17 @@ public class TurnCounter : MonoBehaviour
     private void UpdateTurnUI()
     {
         turnText.text = "" +currentTurn;
+
+        if (playerText != null)
+        {
+            if (currentTurn % 2 == 1)
+            {
+                playerText.text = "Player 1";
+            }
+            else
+            {
+                playerText.text = "Player 2";
+            }
+        }
     }
 }
