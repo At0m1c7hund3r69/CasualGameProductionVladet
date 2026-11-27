@@ -20,6 +20,9 @@ public class EnemyPawn : MonoBehaviour
     public AudioClip moveSfx;
     [Range(0f, 1f)] public float sfxVolume = 1f;
 
+    [Header("Rivals Mode")]
+    public RivalsModeManager.RivalsPlayer owner = RivalsModeManager.RivalsPlayer.None;
+
     private Material originalMaterial;
     private Renderer pawnRenderer;
 
@@ -51,6 +54,12 @@ public class EnemyPawn : MonoBehaviour
         if (isPossessed) return;
         isPossessed = true;
 
+        if (RivalsModeManager.instance != null)
+        {
+            owner = RivalsModeManager.instance.activePlayer;
+            RivalsModeManager.instance.EvaluateWinLoss();
+        }
+
         if (VillegersLeft.Instance != null) //This was added by chris. Calls the VillegersLeft Script to lower it once an enemy is possessd
         {
             VillegersLeft.Instance.Villagers(-1);
@@ -72,7 +81,7 @@ public class EnemyPawn : MonoBehaviour
             meshRenderer.material = possessedMaterial;
         }
         
-        if (TurnManager.instance == null)
+        if (TurnManager.instance != null)
         {
             TurnManager.instance.CheckWinLoseState();
         }
@@ -236,6 +245,11 @@ public class EnemyPawn : MonoBehaviour
             yield return null;
         }
         transform.position = endPos;
+
+        if (RivalsModeManager.instance != null)
+        {
+            RivalsModeManager.instance.RegisterActionCompleted(false);
+        }
     }
 
     private System.Collections.IEnumerator BumpCoroutine(Vector3 targetWorldPos, EnemyPawn targetEnemy)
@@ -269,5 +283,10 @@ public class EnemyPawn : MonoBehaviour
             yield return null;
         }
         transform.position = startPos;
+
+        if (RivalsModeManager.instance != null)
+        {
+            RivalsModeManager.instance.RegisterActionCompleted(true);
+        }
     }
 }

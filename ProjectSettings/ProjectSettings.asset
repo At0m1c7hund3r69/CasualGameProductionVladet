@@ -277,9 +277,9 @@ PlayerSettings:
   useCustomProguardFile: 0
   AndroidTargetArchitectures: 2
   AndroidSplashScreenScale: 0
-  androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  androidSplashScreen: {fileID: 2800000, guid: 885865e2865a89a44916b2eceb3ae38d, type: 3}
+  AndroidKeystoreName: C:/Users/kalam/OneDrive - University of Central Florida/Kayla school/Casual game prod/Vladet/keystore/VladetKeystore.keystore
+  AndroidKeyaliasName: gorgs
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidEnableArm64MTE: 0
   AndroidBuildApkPerCpuArchitecture: 0
@@ -291,7 +291,7 @@ PlayerSettings:
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 0
+  androidUseCustomKeystore: 1
   m_AndroidBanners:
   - width: 320
     height: 180

@@ -1158,7 +1158,7 @@ MonoBehaviour:
   gridManager: {fileID: 1473467923}
   baseUnit: {fileID: 319252692}
   lookDirection: {x: 0, y: -1}
-  sightRange: 2
+  sightRange: 1
 --- !u!4 &319252695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6413606218541850481, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
@@ -5354,7 +5354,7 @@ MonoBehaviour:
   currentState: 0
   activeEnemies: []
   loseOnPossessedDeath: 0
-  PlayersTurnSfx: {fileID: 8300000, guid: 9e57d1bee4a417240b57d5b9543ef3bf, type: 3}
+  PlayersTurnSfx: {fileID: 0}
   sfxVolume: 0.1
 --- !u!1001 &1096562331
 PrefabInstance:
@@ -7960,7 +7960,7 @@ MonoBehaviour:
   gridManager: {fileID: 1473467923}
   baseUnit: {fileID: 1520601792}
   lookDirection: {x: 0, y: 1}
-  sightRange: 2
+  sightRange: 1
 --- !u!4 &1520601795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6413606218541850481, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
@@ -9814,7 +9814,7 @@ MonoBehaviour:
   gridManager: {fileID: 1473467923}
   baseUnit: {fileID: 1889334979}
   lookDirection: {x: 0, y: 1}
-  sightRange: 2
+  sightRange: 1
 --- !u!4 &1889334982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6413606218541850481, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
@@ -10137,7 +10137,7 @@ MonoBehaviour:
   gridManager: {fileID: 1473467923}
   baseUnit: {fileID: 1952983257}
   lookDirection: {x: 0, y: -1}
-  sightRange: 2
+  sightRange: 1
 --- !u!4 &1952983260 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6413606218541850481, guid: 0da25d6f5cb15364e823b8a9e56d08ce, type: 3}
