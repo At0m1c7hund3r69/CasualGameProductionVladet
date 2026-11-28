@@ -13,19 +13,19 @@ public class VillegersLeft : MonoBehaviour
         else { Destroy(gameObject); }
     }
 
-    private void Start()
-    {
-        UpdateVillagerUI();
-    }
+    //private void Start() This was all causing compiler errors
+    //{
+    //UpdateVillagerUI();
+    //}
 
-    public void Villagers(int amount)
-    {
-        villagerAmount += amount;
-        UpdateVillagerUI();
-    }
+    //public void Villagers(int amount)
+    //{
+    //villagerAmount += amount;
+    //UpdateVillagerUI();
+    //}
 
-    private void UpdateVillagerUI()
-    {
-        villagersLeftText.text = "" + villagerAmount;
-    }
+    //private void UpdateVillagerUI() 
+    //{
+    //villagersLeftText.text = "" + villagerAmount;
+    //}
 }

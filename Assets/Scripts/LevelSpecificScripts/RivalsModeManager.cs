@@ -1,19 +1,19 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Events;
-using Unity.VisualScripting;
 
 public class RivalsModeManager : MonoBehaviour
 {
     public static RivalsModeManager instance;
 
-    public enum RivalsPlayer { None, Player1, Player2  }
+    public enum RivalsPlayer { None, Player1, Player2 }
     public enum RivalsPhase { FirstBloodP1, FirstBloodP2, NormalTurn }
 
     [Header("Current Rivals State")]
     public RivalsPlayer activePlayer = RivalsPlayer.Player1;
     public RivalsPhase currentPhase = RivalsPhase.FirstBloodP1;
     public bool isGameOver = false;
+    public bool isEnemyPhaseActive = false;
 
     [Header("Tracked Pawns")]
     public List<EnemyPawn> allPawns = new List<EnemyPawn>();
@@ -30,7 +30,7 @@ public class RivalsModeManager : MonoBehaviour
         if (instance == null) instance = this;
         else Destroy(gameObject);
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         if (allPawns.Count == 0)
@@ -57,7 +57,7 @@ public class RivalsModeManager : MonoBehaviour
                 p1HasMadeFirstPossession = true;
             }
 
-            if (p1HasMadeFirstPossession && possessedThisTurn)
+            if (p1HasMadeFirstPossession && !possessedThisTurn)
             {
                 activePlayer = RivalsPlayer.Player2;
                 currentPhase = RivalsPhase.FirstBloodP2;
@@ -89,6 +89,43 @@ public class RivalsModeManager : MonoBehaviour
 
     private void SwitchToOtherPlayer()
     {
+        if (isEnemyPhaseActive) return;
+        StartCoroutine(RivalsEnemyPhaseRoutine());
+    }
+
+    private System.Collections.IEnumerator RivalsEnemyPhaseRoutine()
+    {
+        isEnemyPhaseActive = true;
+        yield return new WaitForSeconds(0.2f);
+
+        foreach (EnemyPawn pawn in new List<EnemyPawn>(allPawns))
+        {
+            if (pawn == null || !pawn.gameObject.activeInHierarchy || pawn.isPossessed) continue;
+
+            bool caughtPawn = false;
+
+            PawnSightline sightline = pawn.GetComponent<PawnSightline>();
+            if (sightline != null)
+            {
+                caughtPawn = sightline.CheckLineOfSight();
+            }
+
+            if (!caughtPawn)
+            {
+                EnemyPatrol patrol = pawn.GetComponent<EnemyPatrol>();
+                if (patrol != null)
+                {
+                    patrol.TakePatrolStep();
+                }
+            }
+
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        EvaluateWinLoss();
+        isEnemyPhaseActive = false;
+        if (isGameOver) yield break;
+
         activePlayer = (activePlayer == RivalsPlayer.Player1)
             ? RivalsPlayer.Player2
             : RivalsPlayer.Player1;
@@ -99,6 +136,7 @@ public class RivalsModeManager : MonoBehaviour
     public void EvaluateWinLoss()
     {
         if (isGameOver) return;
+        if (currentPhase != RivalsPhase.NormalTurn) return;
 
         int p1Count = 0;
         int p2Count = 0;
@@ -123,7 +161,7 @@ public class RivalsModeManager : MonoBehaviour
 
     public void TriggerPlayerWin(RivalsPlayer winner)
     {
-        if (!isGameOver) return;
+        if (isGameOver) return;
         isGameOver = true;
 
         if (TurnManager.instance != null)

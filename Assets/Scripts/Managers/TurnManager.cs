@@ -73,6 +73,8 @@ public class TurnManager : MonoBehaviour
 
     public void CheckPawnDeathCondition(EnemyPawn deadPawn)
     {
+        if (RivalsModeManager.instance != null) return;
+
         if (loseOnPossessedDeath && deadPawn.isPossessed)
         {
             currentState = TurnState.GameOver;
@@ -82,6 +84,8 @@ public class TurnManager : MonoBehaviour
 
     public void CheckWinLoseState()
     {
+        if (RivalsModeManager.instance != null) return;
+
         activeEnemies.RemoveAll(item => item == null);
 
         int possessedCount = 0;

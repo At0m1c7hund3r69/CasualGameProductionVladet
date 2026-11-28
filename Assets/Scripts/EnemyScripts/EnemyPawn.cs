@@ -22,6 +22,8 @@ public class EnemyPawn : MonoBehaviour
 
     [Header("Rivals Mode")]
     public RivalsModeManager.RivalsPlayer owner = RivalsModeManager.RivalsPlayer.None;
+    public Material player1Material;
+    public Material player2Material;
 
     private Material originalMaterial;
     private Renderer pawnRenderer;
@@ -51,18 +53,20 @@ public class EnemyPawn : MonoBehaviour
 
     public void Possess()
     {
-        if (isPossessed) return;
-        isPossessed = true;
+        bool isRivals = RivalsModeManager.instance != null;
 
-        if (RivalsModeManager.instance != null)
+        if (isRivals)
         {
-            owner = RivalsModeManager.instance.activePlayer;
-            RivalsModeManager.instance.EvaluateWinLoss();
+            var activePlayer = RivalsModeManager.instance.activePlayer;
+            if (isPossessed && owner == activePlayer) return;
+
+            isPossessed = true;
+            owner = activePlayer;
         }
-
-        if (VillegersLeft.Instance != null) //This was added by chris. Calls the VillegersLeft Script to lower it once an enemy is possessd
+        else
         {
-            VillegersLeft.Instance.Villagers(-1);
+            if (isPossessed) return;
+            isPossessed = true;
         }
 
         if (possessVfx != null)
@@ -71,27 +75,50 @@ public class EnemyPawn : MonoBehaviour
             Destroy(vfx, 1.5f);
         }
 
-        if (possessSfx != null)
+        if (possessSfx != null && Camera.main != null)
         {
             AudioSource.PlayClipAtPoint(possessSfx, Camera.main.transform.position, sfxVolume);
         }
 
-        if (meshRenderer  != null && possessedMaterial != null)
-        {
-            meshRenderer.material = possessedMaterial;
-        }
-        
-        if (TurnManager.instance != null)
+        ApplyOwnershipMaterial();
+
+        if (!isRivals && TurnManager.instance != null)
         {
             TurnManager.instance.CheckWinLoseState();
+        }
+    }
+
+    private void ApplyOwnershipMaterial()
+    {
+        Renderer targetRenderer = meshRenderer != null ? meshRenderer : pawnRenderer;
+        if (targetRenderer == null) return;
+
+        if (RivalsModeManager.instance != null)
+        {
+            if (owner == RivalsModeManager.RivalsPlayer.Player1 && player1Material != null)
+            {
+                targetRenderer.material = player1Material;
+                return;
+            }
+            if (owner == RivalsModeManager.RivalsPlayer.Player2 && player2Material != null)
+            {
+                targetRenderer.material = player2Material;
+                return;
+            }
+        }
+
+        if (possessedMaterial != null)
+        {
+            targetRenderer.material = possessedMaterial;
         }
     }
 
     public void Unpossess()
     {
         isPossessed = false;
+        owner = RivalsModeManager.RivalsPlayer.None;
 
-        if (pawnRenderer !=null && originalMaterial != null)
+        if (pawnRenderer != null && originalMaterial != null)
         {
             pawnRenderer.material = originalMaterial;
         }
@@ -113,10 +140,17 @@ public class EnemyPawn : MonoBehaviour
             {
                 EnemyPawn targetEnemy = targetNode.Occupant.GetComponent<EnemyPawn>();
 
-                if (targetEnemy != null && !targetEnemy.isPossessed)
+                if (targetEnemy != null)
                 {
-                    StartCoroutine(BumpCoroutine(targetNode.WorldPosition, targetEnemy));
-                    return true;
+                    bool canPossessTarget = (RivalsModeManager.instance != null)
+                        ? (!targetEnemy.isPossessed || targetEnemy.owner != this.owner)
+                        : !targetEnemy.isPossessed;
+
+                    if (canPossessTarget)
+                    {
+                        StartCoroutine(BumpCoroutine(targetNode.WorldPosition, targetEnemy));
+                        return true;
+                    }
                 }
 
                 InteractableObject interactable = targetNode.Occupant.GetComponent<InteractableObject>();
@@ -213,6 +247,12 @@ public class EnemyPawn : MonoBehaviour
 
         transform.position = endPos;
 
+        if (RivalsModeManager.instance != null)
+        {
+            RivalsModeManager.instance.allPawns.Remove(targetEnemy);
+            RivalsModeManager.instance.EvaluateWinLoss();
+        }
+
         if (TurnManager.instance)
         {
             TurnManager.instance.CheckWinLoseState();
@@ -246,7 +286,7 @@ public class EnemyPawn : MonoBehaviour
         }
         transform.position = endPos;
 
-        if (RivalsModeManager.instance != null)
+        if (RivalsModeManager.instance != null && isPossessed)
         {
             RivalsModeManager.instance.RegisterActionCompleted(false);
         }

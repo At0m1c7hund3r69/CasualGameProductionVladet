@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -33,7 +32,9 @@ public class PlayerGameController : MonoBehaviour
 
     void HandleTouchStart(InputAction.CallbackContext context)
     {
-        if (TurnManager.instance == null) return;
+        bool isRivals = RivalsModeManager.instance != null;
+        if (!isRivals && TurnManager.instance == null) return;
+        if (Pointer.current == null || Camera.main == null) return;
 
         Vector2 screenPos = Pointer.current.position.ReadValue();
         Ray ray = Camera.main.ScreenPointToRay(screenPos);
@@ -43,9 +44,34 @@ public class PlayerGameController : MonoBehaviour
             EnemyPawn clickedPawn = hit.collider.GetComponent<EnemyPawn>();
             if (clickedPawn == null) return;
 
+            if (isRivals)
+            {
+                if (RivalsModeManager.instance.isGameOver || RivalsModeManager.instance.isEnemyPhaseActive) return;
+
+                var activePlayer = RivalsModeManager.instance.activePlayer;
+                var phase = RivalsModeManager.instance.currentPhase;
+
+                if (clickedPawn.isPossessed && clickedPawn.owner == activePlayer)
+                {
+                    activeSwipePawn = clickedPawn;
+                    isDragging = true;
+                    accumulatedDelta = Vector2.zero;
+                    return;
+                }
+
+                if (!clickedPawn.isPossessed &&
+                    (phase == RivalsModeManager.RivalsPhase.FirstBloodP1 ||
+                     phase == RivalsModeManager.RivalsPhase.FirstBloodP2) &&
+                    !PlayerOwnsAnyPawn(activePlayer))
+                {
+                    clickedPawn.Possess();
+                    RivalsModeManager.instance.RegisterActionCompleted(true);
+                }
+                return;
+            }
+
             if (TurnManager.instance.currentState == TurnState.FirstBlood)
             {
-
                 bool isPatrolUnit = clickedPawn.GetComponent<EnemyPatrol>() != null;
                 bool isPriestUnit = clickedPawn.GetComponent<PriestBehavior>() != null;
 
@@ -54,7 +80,6 @@ public class PlayerGameController : MonoBehaviour
                     clickedPawn.Possess();
                     TurnManager.instance.currentState = TurnState.PlayerTurn;
                 }
-
                 return;
             }
 
@@ -70,6 +95,20 @@ public class PlayerGameController : MonoBehaviour
         }
     }
 
+    private bool PlayerOwnsAnyPawn(RivalsModeManager.RivalsPlayer player)
+    {
+        if (RivalsModeManager.instance == null) return false;
+
+        foreach (EnemyPawn pawn in RivalsModeManager.instance.allPawns)
+        {
+            if (pawn != null && pawn.gameObject.activeInHierarchy && pawn.owner == player)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     void HandleTouchEnd(InputAction.CallbackContext context)
     {
         isDragging = false;
@@ -78,7 +117,12 @@ public class PlayerGameController : MonoBehaviour
 
     void Update()
     {
-        if (!isDragging || activeSwipePawn == null || TurnManager.instance.currentState != TurnState.PlayerTurn) return;
+        if (!isDragging || activeSwipePawn == null) return;
+
+        bool canAct = (RivalsModeManager.instance != null && !RivalsModeManager.instance.isGameOver && !RivalsModeManager.instance.isEnemyPhaseActive)
+            || (TurnManager.instance != null && TurnManager.instance.currentState == TurnState.PlayerTurn);
+
+        if (!canAct) return;
 
         Vector2 delta = touchDeltaAction.action.ReadValue<Vector2>();
         accumulatedDelta += delta;
@@ -128,7 +172,7 @@ public class PlayerGameController : MonoBehaviour
 
         bool actionSuccessful = activeSwipePawn.AttemptAction(moveDirection);
 
-        if (actionSuccessful)
+        if (actionSuccessful && RivalsModeManager.instance == null && TurnManager.instance != null)
         {
             TurnManager.instance.EndPlayerTurn();
         }
